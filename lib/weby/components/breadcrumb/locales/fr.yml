@@ -1,0 +1,17 @@
+﻿fr:
+  components:  
+    breadcrumb:
+      name: " Navigation (Breadcrumb)"
+  activerecord: 
+    attributes: 
+      breadcrumb_component:
+        label: " Étiquette "
+        home_label: "Étiquette pour page d'accueil"
+  breadcrumb:
+    views: 
+      show: 
+        home:   " Maison "
+        news: 'Nouvelles'
+        events: 'Events'
+        page_hierarchy: 'Hierarquia da navegação'
+      form: 

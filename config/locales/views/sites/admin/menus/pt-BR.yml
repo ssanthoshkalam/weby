@@ -1,0 +1,21 @@
+pt-BR:
+  sites:
+    admin:
+      menus:
+        form:
+          name:           " Nome "
+        edit:
+          menus:          " Menus "
+        index:
+          menus:          " Menus "
+          menu:           " Menu "
+          none_menu:      " Nenhum Menu "
+          new_menu:       " Novo Menu "
+          new_menu_item:  " Novo Item de Menu "
+          edit_menu:      " Editar "
+          destroy:        " Excluir "
+          none_menu_item: " Nenhum item no menu \"%{menu}\" "
+          expand:         " %{icon} Expandir submenus "
+          collapse:       " %{icon} Recolher submenus "
+        new:
+          menus:          " Menus "

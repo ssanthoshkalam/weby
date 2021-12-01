@@ -1,0 +1,80 @@
+en:
+  sites:
+    admin:
+      home: " Home "
+      common_tasks: "COMMON TASKS"
+      new_page: "NEW PAGE"
+      new_repository: "New File"
+      new_news: 'New news'
+      new_event: 'New event'
+      new_banner: 'New banner'
+      news_fronts: 'Front news'
+      news_newsletter: 'Newsletter'
+      feedback_groups: 'Groups'
+      title_news: 'Last News'
+      title_messages: 'Messages'
+      title_banners: 'Banners'
+      title_events: 'Events'
+      title_users: 'Users'
+      title_repositories: 'Repository'
+      title_history: 'Log'
+      title_menus: 'Menus'
+    index:
+      new_site: "NEW SITE"
+      sites: "SITES"
+      my-sites: "MY SITES"
+      search: "SEARCH"
+      last_news: "LAST NEWS"
+    list:
+      none_page: "No news"
+      sites: "SITES"
+      description: "Description"
+      name: "Name"
+      no-site-found: "No site found."
+    subsites:
+      name:                   " Name "
+      dashboard:              " Dashboard "
+      description:            " Description "
+      title:                  " Title "
+      settings:               " Settings "
+      no-site-found:          " No site found."
+      delete:                 " Delete "
+      active:                 " Active "
+      inactive:               " Inactive "
+      deactivate:             " Deactivate "
+      activate:               " Activate "
+    site:
+      see_all: "See all"
+    my_list:
+      my-sites: "My Sites"
+      description: "Description"
+      name: "Name"
+      no-site-found: "Not in any site."
+      dashboard: " Dashboard "
+    edit:
+      sites: " Sites "
+      settings: " Settings "
+      main: " Main "
+      subsites: " Subsites "
+      social:    "Social networks"
+      pages: "Pages"
+      none: "Don't show"
+      top: 'Before the title'
+      middle: 'After the title'
+      bottom: 'After the text'
+      social_share_pos: 'Social sharer position'
+      social_share_networks: 'Social networks'
+      page: "Pages"
+      event: "Events"
+      news: "News"
+    form:
+      site_comments: " Comments about the goal of the site "
+      example_width: " Example "
+      example_url: " Example: http://site.com "
+      example_top_widht: " Example "
+      example_top_height: " Example "
+      example_per_page: " Example "
+      site_image: " Site image "
+      main_site: " Main Site "
+      domain_explain: " Fill in the domain field only if it's different than the default "
+      google_analytics_hint: 'Paste here the The Global Site Tag code or the Tracking ID'

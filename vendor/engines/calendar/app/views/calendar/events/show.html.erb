@@ -1,0 +1,67 @@
+<% add_meta_tags @event %>
+<% content_for :social_code, render_social_share(:event, @event) %>
+
+<article class="event-show">
+  <%= weby_file_view(@event.image, :l, '128', nil) %>
+  <%= yield :social_code if current_site.event_social_share_pos == 'top' %>
+  <header>
+    <% if (defined?(as_component) ? as_component[:show_title] : true) %>
+      <%= content_tag :h1, @event.name, class: translate_class(@event) %>
+    <% end %>
+  </header>
+  <%= yield :social_code if current_site.event_social_share_pos == 'middle' %>
+
+  <%= content_tag :div, class: 'event' do %>
+    <h3><%= t(".event") %></h3>
+    <%= link_to @event.url, @event.url, target: :_blank %>
+    <p class="local">
+      <%= label(:event, :local, style: 'display: inline-block;') %>:
+      <%= content_tag :span, @event.place, class: translate_class(@event) %>
+    </p>
+    <p class="event-period">
+      <%= label(:event, :event_period, t(@event.same_date? ? '.event_date' : '.period_event'), style: 'display: inline-block;') %>:
+      <span class="event-dates"><%= period_dates(@event, true, true) %></span>
+    </p>
+    <!--<%= content_tag_if @event.kind?, :p, class: 'event-type' do %>
+      <%= label(:event, :kind, style: 'display: inline-block;') %>:
+      <%= t("calendar.admin.events.form.#{@event.kind}") %>
+    <% end %>-->
+    <%= content_tag_if @event.email?, :p, class: 'event-email' do %>
+      <%= label(:event, :event_email, t(".email"), style: 'display: inline-block;') %>:
+      <%= @event.email %>
+    <% end %>
+  <% end %>
+  <div class="body" class="<%= translate_class(@event) %>">
+    <%= render_user_content @event.information %>
+  </div>
+
+  <%# List the related files if they exist %>
+  <% if @event.related_files.any? %>
+    <table class="table related table-striped table-condensed table-bordered">
+      <thead>
+        <tr>
+          <th><%= t(".related_files") %></th>
+          <th><%= t(".size") %></th>
+          <th><%= t(".archive_fingerprint") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @event.related_files.each do |file| %>
+        <tr>
+          <td><%= link_to file.description, file.archive.url %></td>
+          <td><%= file.archive_file_size.to_i/1024 %> Kb</td>
+          <td><%= file.archive_fingerprint %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <%= yield :social_code if current_site.event_social_share_pos == 'bottom' %>
+  <div style="margin-top: 8px;" class="actions">
+    <%= link_to(weby_icon('edit', t("edit")), edit_admin_event_path(@event)) if check_permission(Calendar::Admin::EventsController, [:edit]) %>
+    <% if !defined?(as_component) %>
+      <%= link_to weby_icon('list', t(".list_all")), events_path %>
+      <%= link_to weby_icon('chevron-left', t("back")), :back %>
+    <% end %>
+  </div>
+</article>

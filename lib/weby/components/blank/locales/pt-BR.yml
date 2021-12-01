@@ -1,0 +1,18 @@
+pt-BR:
+  components:
+    blank:
+      name:            " HTML/Javascript "
+      body:            " Conteúdo "
+  activerecord:
+    attributes:
+      blank_component:
+        body:          " Conteúdo "
+        put_at_end:    " Inserir conteúdo no final do documento "
+        html_class:    " Classe HTML "
+  blank:
+    views:
+      form:
+        format:           " Formatar "
+        comment:          " Comentar "
+        uncomment:        " Descomentar "
+

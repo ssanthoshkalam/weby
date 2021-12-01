@@ -1,0 +1,31 @@
+#mini_layout{
+  border-top: 1px dotted black;
+  border-left: 1px dotted black;
+  background-color: #E6E6E6;
+  cursor: pointer;
+}
+
+.mini_level{
+  border-bottom: 1px dotted black;
+  min-height: 25px;
+} 
+
+.mini_level > div{
+  border-right: 1px dotted black;
+  box-sizing: border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+  -webkit-box-sizing:border-box; /* Safari */
+  float: left;
+  padding: 2px 0px 0px 5px;
+}
+
+.clicked, .clicked.hover:hover { 
+  background: #FDFCCC;
+  border-bottom: 1px dotted black;
+}
+
+.hover:hover {
+  background-color: #cacaca;
+  border-bottom: 1px dotted black;
+}
+

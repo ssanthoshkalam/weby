@@ -1,0 +1,43 @@
+pt-BR:
+  admin:
+    sites:
+      show:
+        sites:                  " Sites "
+      new:
+        sites:                  " Sites "
+      index:
+        sites:                  " Sites "
+        new_site:               " Novo Site "
+      edit:
+        sites:                  " Sites "
+        settings:               " Configurações "
+        main:                   " Principal "
+        subsites:               " Subsites "
+        pages:                  " Páginas "
+        exec:                   " Rotinas "
+        index_news:             " Indexar notícias "
+      reindex:
+        news_reindexed:         " Notícias, páginas e eventos indexados! "
+      list:
+        name:                   " Nome "
+        dashboard:              " Administração "
+        description:            " Descrição "
+        title:                  " Título "
+        settings:               " Configurações "
+        no-site-found:          " Nenhum site encontrado."
+        delete:                 " Excluir "
+        active:                 " Ativo "
+        inactive:               " Inativo "
+        deactivate:             " Desativar "
+        activate:               " Ativar "
+      form:
+        example_width:          " Exemplo "
+        example_url:            " Exemplo: http://site.com "
+        example_per_page:       " Exemplo "
+        main_site:              " Site Principal "
+        site_comments:          " Comentário sobre os objetivos do site "
+        footer_text:            " Instituição - Endereço. CEP XXXXX-XXX - Caixa Postal XXX. Cidade-Estado - Fone: Geral: +XX XX XXXX-XXXX; Atendimento ao Usuário: +XX XX XXXX-XXXX, +XX XXXX-XXXX. Fax: +XX XX XXXX-XXXX "
+        domain_explain:         " Preencha o domínio apenas se for diferente do padrão "
+        active:                 " Ativo "
+        inactive:               " Inativo "
+        google_analytics_hint:  'Cole o código de acompanhamento da tag de site global ou o ID de acompanhamento'

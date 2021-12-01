@@ -1,0 +1,86 @@
+pt-BR:
+  sites:
+    admin:
+      home: " Início "
+      common_tasks: "TAREFAS MAIS COMUNS"
+      new_page: "Nova Página"
+      new_repository: "Novo Arquivo"
+      new_news: 'Nova notícia'
+      new_event: 'Novo evento'
+      new_banner: 'Novo banner'
+      news_fronts: 'Capas'
+      news_newsletter: 'Newsletter'
+      feedback_groups: 'Grupos'
+      title_news: 'Últimas Notícias'
+      title_messages: 'Mensagens'
+      title_banners: 'Banners'
+      title_events: 'Eventos'
+      title_users: 'Usuários'
+      title_repositories: 'Arquivos'
+      title_history: 'Histórico'
+      title_menus: 'Menus'
+    index:
+      new_site: "NOVO SITE"
+      sites: "SITES"
+      my-sites: "MEUS SITES"
+      last_news: "ÚLTIMAS NOTÍCIAS"
+      search: "BUSCAR"
+    list:
+      none_page: "Nenhuma notícia"
+      sites: "SITES"
+      description:         " Descrição "
+      legend:              " Legenda "
+      title:               " Titulo "
+      name: "Nome"
+      no-site-found: "Nenhum site encontrado."
+    subsites:
+      name:                   " Nome "
+      dashboard:              " Administração "
+      description:            " Descrição "
+      title:                  " Título "
+      settings:               " Configurações "
+      no-site-found:          " Nenhum site encontrado."
+      delete:                 " Excluir "
+      active:                 " Ativo "
+      inactive:               " Inativo "
+      deactivate:             " Desativar "
+      activate:               " Ativar "
+    my_list:
+      my-sites: "Meus Sites"
+      description:         " Descrição "
+      legend:              " Legenda "
+      title:               " Titulo "
+      name: "Nome"
+      no-site-found: "Sem papel em nenhum site."
+      dashboard: " Administração "
+    site:
+      see_all: "Ver todas"
+    edit:
+      sites: " Sites "
+      settings: " Configurações "
+      main: " Principal "
+      subsites: " Subsites "
+      social:   "Redes Sociais"
+      pages: "Páginas"
+      none: 'Não exibir'
+      top: 'Acima do título'
+      middle: 'Abaixo do título'
+      bottom: 'Abaixo do texto'
+      social_share_pos: 'Posição do compartilhamento social'
+      social_share_networks: 'Redes sociais'
+      facebook_comments: "Ativar Comentários Facebook"
+      page: "Páginas"
+      event: "Eventos"
+      news: "Notícias"
+      facebookComments: "Adicionar Comentários do Facebook"
+    form:
+      site_comments: " Comentário sobre os objetivos do site "
+      example_width: " Exemplo "
+      example_url: " Exemplo: http://site.com "
+      example_top_widht: " Exemplo "
+      example_top_height: " Exemplo "
+      example_per_page: " Exemplo "
+      site_image: " Imagem do Site "
+      main_site: " Site Principal "
+      domain_explain: " Preencha o domínio apenas se for diferente do padrão "
+      google_analytics_hint: 'Cole o código de acompanhamento da tag de site global ou o ID de acompanhamento'

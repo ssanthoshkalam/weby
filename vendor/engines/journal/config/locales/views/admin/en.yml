@@ -1,0 +1,17 @@
+en:
+  journal:
+    admin:
+      target_pages:
+        register_date:        " Register Date "
+        news:                 " News "
+        user:                 " Author "
+        title:                " Title "
+        category:             " Category "
+        none_news:            " No News Found "
+        search_news:          " Search news "
+      form:
+        m:                    " Medium "
+        l:                    " Little "
+        i:                    " Miniature "
+        t:                    " Thumbnail "
+        image_size_hint:      " A thumbnail is a smaller version of the image, with a square crop, so the original aspect ratio is preserved "

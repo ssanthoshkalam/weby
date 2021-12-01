@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-5">
+    <%= form_tag admin_users_path, method: 'get', autocapitalize: "off", class: ' search' do %>
+      <%= search_input params[:search] %>
+    <% end %>
+  </div>
+  <div class="col-md-7">
+    <div class="pull-right">
+      <% if current_user.is_admin? %>
+        <%= link_to t(".new_user"), new_admin_user_path, class: "btn btn-success" %>
+      <% end %>
+      <% if check_permission(Admin::UsersController, :change_roles) %>
+        <%= link_to t('.roles_permissions'), admin_roles_path, class: "btn btn-default" %>
+      <% end %>
+      <% if check_permission(Admin::UsersController, :manage_roles) %>
+        <%= link_to t('.manage_roles'), manage_roles_admin_users_path, class: "btn btn-default" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div id="list">
+  <%= render :partial => "list" %>
+</div>

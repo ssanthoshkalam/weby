@@ -1,0 +1,111 @@
+/*
+ *= require weby_shared
+ *= require google/lato
+ */
+
+$weby-red: #BC1625;
+$weby-blue: #344259;
+$link-color: $weby-blue;
+$body-bg: #F5F5F5;
+$lato-font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $lato-font-family;
+$btn-primary-bg: #BC1625;
+$nav-pills-active-link-hover-bg: $weby-blue;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.inside {
+  max-width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+
+  .logo {
+    text-align: center;
+    margin: 15px 0 30px;
+  }
+
+  .box {
+    background: #FFF;
+    padding: 20px 30px;
+    border: 1px solid #DFDFDF;
+    box-shadow: 0 0 5px 0 #eee;
+    border-radius: 5px;
+
+    .sessions-pills {
+      margin-bottom: 15px;
+
+      li > a {
+        padding: 10px 20px;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+  .help-nav {
+    text-align: right;
+    font-size: 11px;
+
+    .cafe-logo{
+      width: 50%;
+      float: left;
+    }
+
+    .cafe-logo > img{
+      width: 100%;
+    }
+
+    li {
+      display: block;
+    }
+
+    a {
+      display: inline-block;
+      padding: 5px 0 0;
+    }
+  }
+}
+
+.alert {
+  margin-bottom: 15px;
+  font-size: 13px;
+  padding: 10px 15px;
+}
+
+.close { font-size: 18px; }
+
+.checkbox { margin-top: 0 }
+
+.btn {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+a:hover { text-decoration: none; }
+
+.help-block {
+  font-size: 12px;
+  color: #888;
+}
+
+.title-box {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+blockquote{
+  font-size: 14px;
+}
+
+.dual-panel {
+  display: flex;
+  align-items: stretch;
+  > :nth-child(2) {
+    flex: 1;
+    margin-left: 10px;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+}

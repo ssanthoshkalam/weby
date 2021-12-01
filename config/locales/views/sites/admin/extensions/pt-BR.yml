@@ -1,0 +1,19 @@
+pt-BR:
+  sites:
+    admin:
+      extensions:
+        list:
+          none_extension:     " Nenhuma Extensão "
+          name:               " Nome "
+          version:            " Versão "
+          edit_extension:     " Configuração "
+        index:
+          extensions:         " Extensões "
+          new_extension:      " Adicionar Extensão "
+          extension:          " Extensão "
+        new:
+          extensions:         " Extensões "
+        edit:
+          extensions:         " Extensões "
+        none:
+          no_settings:        " Extensão sem configurações "

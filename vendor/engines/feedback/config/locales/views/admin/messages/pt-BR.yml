@@ -1,0 +1,26 @@
+pt-BR:
+  feedback:
+    admin:
+      messages:
+        index:
+         feedbacktitle: " Fale conosco "
+         feedback:      " Mensagens "
+         new_group:     " Novo Grupo "
+         groups:        " Grupos "
+        show:
+         feedback:      " Fale conosco "
+         name:          " Nome "
+         email:         " E-mail "
+         subject:       " Assunto "
+         message:       " Mensagem "
+         send_date:     " Data de Envio "
+         groups:        " Grupos "
+         group:         " Grupo "
+         list_all:      " Listar todas "
+        list:
+         name:          " Nome "
+         none_feedback: " Nenhuma Mensagem "
+         subject:       " Assunto "
+         date:          " Data "
+         email:         " E-mail "
+

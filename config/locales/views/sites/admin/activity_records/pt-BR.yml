@@ -1,0 +1,71 @@
+pt-BR:
+  sites:
+    admin:
+      activity_records:
+        index:
+          activity_records:           " Histórico "
+        show:
+          activity_records:           " Histórico "
+        list:
+          no_activity_records:        " Nenhum registro de atividade encontrado "
+          details:                    " Detalhes "
+          show:                       " Mostrar "
+          created_at:                 " Data "
+          note:                       " Atividade "
+#--- Sites/Admin/Menus/MenuItem ---#
+          created_menu_item:          " criou um item de menu "
+          updated_menu_item:          " atualizou um item de menu "
+          destroyed_menu_item:        " excluiu um item de menu "
+#--- Sites/Admin/Banners ---#
+          created_banner:             " criou um banner "
+          updated_banner:             " atualizou um banner "
+          destroyed_banner:           " excluiu um banner "
+#--- Sites/Admin/Components ---#
+          created_component:          " criou um componente "
+          updated_component:          " atualizou um componente "
+          destroyed_component:        " excluiu um componente "
+#--- Sites/Admin/Menus ---#
+          created_menu:               " criou um menu "
+          updated_menu:               " atualizou um menu "
+          destroyed_menu:             " excluiu um menu "
+#--- Sites/Admin/Pages ---#
+          created_page:               " criou uma página "
+          updated_page:               " atualizou uma página "
+          destroyed_page:             " excluiu uma página "
+          moved_page_to_recycle_bin:  " moveu uma página pra lixeira "
+          restored_page:              " restaurou uma página "
+#--- Sites/Admin/News ---#
+          created_news:               " criou uma notícia "
+          updated_news:               " atualizou uma notícia "
+          shared_news:                " compartilhou uma notícia "
+          unshared_news:              " removeu uma notícia compartilhada "
+          destroyed_news:             " excluiu uma notícia "
+          moved_news_to_recycle_bin:  " moveu uma notícia pra lixeira "
+          restored_news:              " restaurou uma notícia "
+#--- Sites/Admin/Events ---#
+          created_event:               " criou um evento "
+          updated_event:               " atualizou um evento "
+          destroyed_event:             " excluiu um evento "
+          moved_event_to_recycle_bin:  " moveu um evento pra lixeira "
+          restored_event:              " restaurou um evento "
+#--- Sites/Admin/Repositories ---#
+          uploaded_file:              " enviou um arquivo "
+          updated_file:               " atualizou um arquivo "
+          destroyed_file:             " excluiu um arquivo "
+          moved_file_to_recycle_bin:  " moveu uma arquivo pra lixeira "
+          restored_file:              " restaurou um arquivo "
+#--- Sites/Admin/Roles ---#
+          created_role:               " criou um papel "
+          updated_role:               " atualizou um papel "
+          destroyed_role:             " excluiu um papel "
+#--- Sites/Admin/Style ---#
+          created_style:              " criou um estilo "
+          updated_style:              " atualizou um estilo "
+          destroyed_style:            " excluiu um estilo "
+          followed_style:             " seguiu um estilo "
+          copied_style:               " copiou um estilo "
+#--- Sites/Admin/Theme ---#
+          theme_installed:            " instalou um tema "
+          theme_applied:              " aplicou um tema "
+          theme_reseted:              " restaurou o tema "
+          layout_settings_updated:    " atualizou configurações do tema "

@@ -1,0 +1,426 @@
+
+body { background: transparent; }
+
+/* To work with HTML5 more easy */
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, .menu-res, nav, section, summary { display: block; }
+
+/* Define basic style to layout */
+html { background: white; }
+body {
+  font-size: 13px;
+  font-family: Verdana, sans-serif;
+  color: #484848;
+  width: auto;
+  margin: 0 auto; }
+
+#wrapper {
+  background: white;
+  border: 2px solid transparent; }
+
+/* Define style to Header, Footer and contents */
+footer {
+  clear: both;
+  bottom: 0; }
+
+/* Weby icons*/
+i{ font-family: FontAwesome !important; }
+
+/* Define footer information */
+footer #info {
+  padding: 0 0 5px 5px;
+  clear: both; }
+
+footer #info p {
+  margin: 0; }
+
+/* Define area of top image */
+/*header figure#cover { overflow: hidden; }*/
+header .image_component {
+  margin: 0px; }
+
+/* Define Header and Footer menus */
+header > nav {
+  padding: 0px 5px 5px 0px; }
+
+footer > nav {
+  padding: 5px 5px 5px 0px; }
+
+header nav .menu-res,
+footer nav .menu-res {
+  list-style: none outside none;
+  padding: 0;
+  margin: 0; }
+
+header nav .menu-res li,
+footer nav .menu-res li {
+  padding: 0 0 0 5px;
+  margin-right: 2px;
+  float: left;
+  border: 1px solid silver; }
+
+header nav .menu-res li:hover,
+footer nav .menu-res li:hover {
+  position: relative;
+  z-index: 100;
+  background-color: #FF0000; }
+
+header nav .menu-res li:hover > .menu-res,
+footer nav .menu-res li:hover > .menu-res {
+  left: -21px;
+  z-index: -1; }
+
+header nav .menu-res li:hover .menu-res li:hover > a,
+footer nav .menu-res li:hover .menu-res li:hover > a {
+  white-space: normal;
+  height: auto; }
+
+header nav .menu-res li:hover .menu-res li:hover > .menu-res,
+footer nav .menu-res li:hover .menu-res li:hover > .menu-res {
+  left: 105px;
+  z-index: 100; }
+
+header nav .menu-res li .menu-res,
+footer nav .menu-res li .menu-res {
+  position: absolute;
+  left: -9999px;
+  margin-left: 20px;
+  width: 105px; }
+
+header nav .menu-res li .menu-res li,
+footer nav .menu-res li .menu-res li {
+  float: none;
+}
+
+header nav .menu-res li .menu-res li .menu-res,
+footer nav .menu-res li .menu-res li .menu-res {
+  margin-left: 0px;
+  margin-top: 0px; }
+
+header nav .menu-res li a,
+footer nav .menu-res li a {
+  background: #fff;
+  display: block;
+  line-height: 25px;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 14px; }
+
+header nav .menu-res li.sub > a,
+footer nav .menu-res li.sub > a {
+  background: url("/assets/arrow_collapsed.png") no-repeat scroll #fff;
+  background-position: right center; }
+
+header nav > .menu-res > li.sub > a {
+  background: url("/assets/arrow_expanded.png") no-repeat scroll #fff;
+  background-position: right center; }
+
+footer nav > .menu-res > li.sub > a {
+  background: url("/assets/arrow_expanded_up.png") no-repeat scroll #fff;
+  background-position: right center; }
+
+header nav .menu-res li:hover > .menu-res {
+  top: 26px; }
+
+header nav .menu-res li:hover .menu-res li:hover > .menu-res {
+  top: -1px; }
+
+footer nav .menu-res li:hover > .menu-res {
+  bottom: 26px; }
+
+footer nav .menu-res li:hover .menu-res li:hover > .menu-res {
+  bottom: -1px; }
+
+
+// aside
+aside
+{
+  width: 155px;
+  // style to menu component
+  .menu_component
+  {
+    // global to all menus (extended or dropdown)
+    .menu-res
+    {
+      margin: 0;
+      padding: 0;
+      li
+      {
+        padding-left: 5px;
+        list-style-type: none;
+        a
+        {
+          background: #FFF; // TODO intrusive, remove
+          display: block;
+          padding: 5px 7px;
+        }
+      }
+    }
+    // style to dropdown menus
+    .dropdown
+    {
+      li
+      {
+        border: 1px solid #DDD; // TODO intrusive?, if yes remove
+        position: relative;
+        &:hover
+        {
+          background-color: #DDD; // TODO intrusive, remove
+        }
+        .menu-res
+        {
+          position: absolute;
+          width: 155px;
+          border-width: 0px;
+          top: -1px;
+        }
+        &.sub
+        {
+          > a { background-repeat: no-repeat; }
+          &:hover > .menu-res { z-index: 99999; }
+        }
+      }
+    }
+  }
+  // style specific to class right
+  &.right
+  {
+    // style to menu component
+    .menu_component
+    {
+      // style to dropdown menus
+      .dropdown li
+      {
+        padding: 0 5px 0 0;
+        a { text-align: right }
+        &.sub > a
+        {
+          background-image: url("/assets/arrow_collapsed_right.png");
+          background-position: left center;
+        }
+        &.sub > .menu-res { left: -99999px; }
+        &.sub:hover > .menu-res { left: -155px; }
+      }
+    }
+  }
+  // style specific to class left
+  &.left
+  {
+    // style to menu component
+    .menu_component
+    {
+      // style to dropdown menus
+      .dropdown li
+      {
+        padding: 0 0 0 5px;
+        &.sub > a
+        {
+          background-image: url("/assets/arrow_collapsed.png");
+          background-position: right center;
+        }
+        &.sub > .menu-res { left: -99999px; }
+        &.sub:hover > .menu-res
+        {
+          left: inherit;
+          right: -155px;
+        }
+      }
+    }
+  }
+}
+
+/* Define content area */
+#content {
+  width: auto;
+  padding: 9px;
+  padding-top: 0;
+  overflow: auto; }
+
+#content > article {
+  padding: 9px;
+  border: 1px solid #EEE;
+  margin: 0px 3px;
+
+  & > a:first-child {
+    float: right; }
+
+  .event {
+    padding-left: 5px;
+    border-left: 1px solid #CCC;
+  }
+}
+
+#content #news {
+	width: 99%;
+  font-family: Verdana;
+  font-weight: Normal;
+  padding-bottom: 5px; }
+
+#content #news h1 {
+  font-size: 140%;
+  color: #1C1C1C; }
+
+#content #news h3 {
+  line-height: 100%;
+  color: #2F4F4F;
+  font-size: 120%; }
+
+#content #news h3 {
+  // font-size: 100%;
+  // line-height: 100%;
+  // color: #696969;
+}
+
+#content #news li:nth-child(odd) {
+  border-bottom: 1px dotted #DDD;
+  padding: 10px 0;
+  text-align: left; }
+
+#content #news li:nth-child(odd) a img {
+  float: left;
+  padding-right: 15px; }
+
+#content #news li:nth-child(even) {
+  border-bottom: 1px dotted #DDD;
+  padding: 10px 0;
+  text-align: right; }
+
+#content #news li:nth-child(even) a img {
+  float: right;
+  padding-left: 15px; }
+
+.page-details{
+  font-size: 0.9em;
+  margin: 0 0 9px; }
+
+/* Classes to help build layout */
+.clear {
+  clear: both; }
+
+.center {
+  text-align: center; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+table.zebra tr:nth-child(2n+2) {
+  background-color: #F6F7F8; }
+
+table.fullwidth {
+  width: 100%; }
+
+table.border,
+table.border th,
+table.border td {
+  border-collapse: collapse;
+  border: 1px solid silver; }
+
+table th,
+table td {
+  padding: 3px; }
+
+table th {
+  font-size: 13px; }
+
+// to clean paginate
+.pagination {
+  height: auto;
+  margin: 0;
+  padding: 3px 0px;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.pagination > li{
+  display: inline;
+}
+
+.pagination > li > a,.pagination > li > span {
+  background: transparent !important;
+  float: none;
+  padding: 0;
+  line-height: 18px;
+  border: none;
+}
+
+.pagination > li > span {
+  padding-right: 5px;
+}
+
+// important
+* { font-family: Verdana, sans-serif; }
+
+html { font-size: 13px; }
+
+#wrapper{ margin: 0 auto; }
+
+a, a:link, a:visited {  text-decoration: none; }
+
+a:hover, a:active {  text-decoration: none;}
+
+a img{ border: 0; text-decoration: none;}
+
+p {
+  margin: 0 0 9px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.page-show .categories .label a{
+  color: #fff !important ;
+}
+
+// required is red!
+label.required abbr { color: red; }
+
+.mobile { display: none; }
+
+@media (min-width: 481px) and (max-width: 767px)
+{
+  .first_place,
+  #wrapper
+  {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+@media (max-width: 480px)
+{
+  .first_place
+  {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  aside
+  {
+    width: 100%;
+  }
+  .no-mobile { display: none; }
+  .mobile { display: block; }
+}
+
+@media screen and (max-width: 640px) {
+  /* Responsive Tables */
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+  /* Responsive Menus */
+  .menu-res.dropdown li.sub:hover > .menu-res {
+    top: 0;
+    left: 0
+  }
+}
+

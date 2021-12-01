@@ -1,0 +1,31 @@
+<%= form_tag change_roles_site_admin_users_path,
+  method: "post",
+  id: "form_user_#{@user.id}",
+  remote: 'true',
+  update: 'enroled' do %>
+
+  <%= hidden_field_tag 'user[id]', @user.id %>
+
+  <p>
+    <% @roles.each do |role| %>
+      <div class="checkbox">
+        <label>
+          <%= check_box_tag 'role_ids[]',
+            role.id,
+            @user.roles.any?{ |r| r.site_id == @site.try(:id) && r.id == role.id} %>
+          <%= role.name %>
+        </label>
+      </div>
+    <% end %>
+  </p>
+
+  <%= submit_tag (t"submit"),
+    class: "btn btn-primary role-submit", disable_with: t("please_wait"),
+    data: {confirm_unrole: current_user.id == @user.id ? t(".confirm_unrole") : ''},
+    onclick: current_user.id == @user.id ? "return test_unrole('form_user_#{@user.id}');" : "" %>
+
+  <%= link_to t('cancel'), {action: 'manage_roles'},
+    onclick: "return hide_form(#{@user.id});",
+    id: "form_role_cancel",
+    class: "btn btn-default" %>
+<% end %>

@@ -1,0 +1,6 @@
+languages:
+  -ruby
+rules:
+  ignore:
+    - avoid_copy_paste
+    - avoid_similar_code

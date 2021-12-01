@@ -1,0 +1,43 @@
+en:
+  admin:
+    sites:
+      show:
+        sites:                  " Sites "
+      new:
+        sites:                  " Sites "
+      index:
+        sites:                  " Sites "
+        new_site:               " New Site "
+      edit:
+        sites:                  " Site "
+        settings:               " Settings "
+        main:                   " Main "
+        subsites:               " Subsites "
+        pages:                  " Pages "
+        exec:                   " Execute "
+        index_news:             " Index news "
+      reindex:
+        news_reindexed:         " News, Pages and events successfully indexed "
+      list:
+        name:                   " Name "
+        dashboard:              " Dashboard "
+        description:            " Description "
+        title:                  " Title "
+        settings:               " Settings "
+        no-site-found:          " No site found."
+        delete:                 " Delete "
+        active:                 " Active "
+        inactive:               " Inactive "
+        deactivate:             " Deactivate "
+        activate:               " Activate "
+      form:
+        example_width:          " Example "
+        example_url:            " Example: http://site.com "
+        example_per_page:       " Example "
+        main_site:              " Main Site "
+        site_comments:          " Comments about goals site "
+        footer_text:            " Institution - Address. Zip XXXXX-XXX - Post Box XXX. City-State - Phone: +XX XX XXXX-XXXX; Customer Care: +XX XX XXXX-XXXX, +XX XXXX-XXXX. Fax: +XX XX XXXX-XXXX "
+        domain_explain:         " Fill in the domain field only if it's different than the default "
+        active:                 " Active "
+        inactive:               " Inactive "
+        google_analytics_hint: 'Paste here the The Global Site Tag code or the Tracking ID'

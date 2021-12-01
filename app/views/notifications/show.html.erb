@@ -1,0 +1,14 @@
+<div id="profile">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render partial: 'profile' %>
+    </div>
+    <div class="col-md-9">
+      <div class="heading buffer-bottom"><%= @notification.title %></div>
+      <div id="notifications">
+        <div class="date"><%= l(@notification.created_at, :format => :short) %></div>
+        <%= raw @notification.body %>
+      </div>
+    </div>
+  </div>
+</div>

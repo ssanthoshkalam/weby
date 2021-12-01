@@ -1,0 +1,30 @@
+en:
+  activerecord:
+    models:
+      site:                " Site "
+    attributes:
+      site:
+        name:              "Name"
+        created_at:        " Created at "
+        updated_at:        " Updated at "
+        url:               " URL "
+        domain:            " Domain "
+        description:       " Description "
+        groupings:         " Groups "
+        top_banner_id:     " Top banner "
+        top_banner_width:  " Top banner width "
+        top_banner_height: " Top banner height "
+        body_width:        " Site Width "
+        google_analytics:  " Google Analytics Code "
+        theme:             " Theme "
+        restrict_theme:    " Restrict theme management "
+        show_pages_author: " Show pages author "
+        show_pages_created_at: " Show pages created date "
+        show_pages_updated_at: " Show pages updated date "
+        per_page:          " Per page "
+        per_page_default:  " Per page default quantity "
+        title:             " Title "
+        parent_id:         " Parent id "
+        locales:           " Languages "
+        head_html:         " Head HTML "
+        status:            " Status "

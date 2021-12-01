@@ -1,0 +1,30 @@
+pt-BR:
+  activerecord:
+    models:
+      site:                " Site "
+    attributes:
+      site:
+        name:              "Nome"
+        created_at:        " Criado em "
+        updated_at:        " Atualizado em "
+        url:               " URL "
+        domain:            " Domínio "
+        description:       " Descrição "
+        groupings:         " Grupos "
+        top_banner_id:     " Topo do site "
+        top_banner_width:  " Largura do topo do site "
+        top_banner_height: " Altura do topo do site "
+        body_width:        " Largura do site "
+        google_analytics:  " Código do Google Analytics "
+        theme:             " Tema "
+        show_pages_author: " Mostrar o autor da página "
+        show_pages_created_at: " Mostrar a data de criação da página "
+        show_pages_updated_at: " Mostrar a data de atualização da página "
+        restrict_theme:    " Restringir gerenciamento de tema "
+        per_page:          " Por página "
+        per_page_default:  " Quantidade padrão por página "
+        title:             " Título "
+        parent_id:         " id Pai "
+        locales:           " Idiomas "
+        head_html:         " HTML do head "
+        status:            " Status "

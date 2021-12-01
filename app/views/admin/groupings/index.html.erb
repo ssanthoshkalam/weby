@@ -1,0 +1,42 @@
+<p class="pull-right">
+  <% if check_permission(Admin::GroupingsController, [:new]) %>
+    <%= link_to t(".create_grouping"),
+      new_admin_grouping_path,
+      class: "btn btn-success" %>
+  <% end %>
+</p>
+<div class="clearfix"></div>
+
+<% if @groupings.empty? %>
+  <div class="alert alert-warning">
+    <%= t(".none_grouping") %>
+  </div>
+<% else %>
+  <table class="table table-striped align-middle">
+  <thead>
+    <tr>
+      <th><%= t(".name") %></th>
+      <th><%= t(".sites") %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @groupings.each do |grouping| %>
+      <tr>
+        <td>
+          <%= link_to "#{grouping.name} #{content_tag(:span, icon(:edit), class: 'oh-c-i')}".html_safe, edit_admin_grouping_path(grouping) %>
+          <%= content_tag :span, t('.hidden'), class: 'label label-info' if grouping.hidden %>
+        </td>
+        <td><%= grouping.sites.map{|site| site.name }.join(', ') %></td>
+        <td class="text-right">
+          <%= render_dropdown_menu do %>
+            <%= raw make_menu(grouping, :except => 'show') %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<% end %>

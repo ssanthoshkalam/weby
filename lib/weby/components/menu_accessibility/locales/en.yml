@@ -1,0 +1,59 @@
+en:
+  components:
+    menu_accessibility:
+      name:                 " Accessibility Menu "
+  activerecord:
+    attributes:
+      menu_accessibility_component:
+        font_size:          " Font Size "
+        contrast:           " Contrast "
+        label_font_size:    " Font Size Label "
+        label_contrast:     " Contrast Label "
+        display_controls:   " Display Controls "
+        additional_information: " Addicional Information "
+        extended_accessibility: " Activate "
+        template:               " Template "
+        content_anchor:     ' Content anchor '
+        menu_anchor:        ' Menu anchor '
+        search_anchor:      ' Search anchor '
+        information_access_url: 'Information Access URL'
+  menu_accessibility:
+    views:
+      form:
+        font_size:          " Font Size "
+        contrast:           " Contrast "
+        display_controls:   " Display Controls "
+        basic:              " Basic "
+        extended:           " Extended "
+        default:            " Default "
+        bar:                " Bar "
+        information_access_hint: "The image will only be displayed if this URL is present"
+      basic:
+        increase_font_size: " Increase font size "
+        decrease_font_size: " Decrease font size "
+        default_font_size:  " Change to default font size "
+        contrast:           " Change the color contrast "
+        contrast_normal:    " Remove the colour contrast "
+        apply_contrast:     " Activate contrast mode "
+        remove_contrast:    " Deactivate contrast mode "
+        colour:             " Colour "
+        go_to_content:      " Go to Content "
+        go_to_menu:         " Go to Menu "
+        go_to_search:       " Go to Search "
+      extended:
+        increase_font_size: " Increase font size "
+        decrease_font_size: " Decrease font size "
+        default_font_size:  " Change to default font size "
+        contrast:           " Change the color contrast "
+        contrast_normal:    " Remove the colour contrast "
+        colour:             " Colour "
+        accessibility_tools: " Accessibility Tools "
+        accessibility_keys: " Access Keys "
+        or:                 " or "
+        homepage:           " Homepage "
+        go_to_content:      " Go to Content "
+        focus_search_field: " Focus on Search Field "
+        contact_information: " Contact Information "
+        details_hotkeys:    " Details Access Key "
+        accessibility:      " + Accessibility "
+

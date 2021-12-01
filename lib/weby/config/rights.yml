@@ -1,0 +1,284 @@
+rights:
+  roles:
+    manage:
+      name:
+        en: Manage Roles
+        pt-BR: Gerenciar papéis
+      action: create index edit new show update
+    destroy:
+      name:
+        en: Destroy Roles
+        pt-BR: Excluir papéis
+      action: destroy
+  users:
+    manage_roles:
+      name:
+        en: List users
+        pt-BR: Listar usuários
+      action: manage_roles search
+    change_roles:
+      name:
+        en: Change user roles
+        pt-BR: Mudar papéis de usuários
+      action: change_roles search
+  pages:
+    index:
+      name:
+        en: List Pages
+        pt-BR: Listar Páginas
+      action: index fronts
+    show:
+      name:
+        en: View Page
+        pt-BR: Ver Página
+      action: show
+    edit:
+      name:
+        en: Edit page
+        pt-BR:  Editar Página
+      action: edit update toggle
+    destroy:
+      name:
+        en: Destroy Page
+        pt-BR: Excluir Página
+      action: destroy destroy_many
+    new:
+      name:
+        en: Create Pages
+        pt-BR: Criar Página
+      action: new create
+    purge:
+      name:
+        en: Purge
+        pt-BR: Excluir permanentemente
+      action: recycle_bin destroy purge empty_bin
+    recover:
+      name:
+        en: Restore Page
+        pt-BR: Restaurar página
+      action: recycle_bin recover
+  menus:
+    index:
+      name:
+        en: List Menus
+        pt-BR: Listar Menus
+      action: index
+    show:
+      name:
+        en: View Menus
+        pt-BR: Ver Menus
+      action: show
+    edit:
+      name:
+        en: Edit Menu
+        pt-BR: Editar Menu
+      action: edit update change_order
+    destroy:
+      name:
+        en: Destroy Menu
+        pt-BR: Excluir Menu
+      action: destroy
+    new:
+      name:
+        en: Create Menu
+        pt-BR: Criar Menu
+      action: new create
+  menu_items:
+    change_position:
+      name:
+        en: Order Menu Itens
+        pt-BR: Ordernar Itens de Menu
+      action: change_position change_order change_menu
+    index:
+      name:
+        en: List Menu Itens
+        pt-BR: Listar Itens de Menu
+      action: index
+    show:
+      name:
+        en: View Menu Itens
+        pt-BR: Ver Item de Menu
+      action: show
+    edit:
+      name:
+        en: Edit Menu Itens
+        pt-BR: Editar Item de Menu
+      action: edit update toggle
+    destroy:
+      name:
+        en: Destroy Menu Iten
+        pt-BR: Excluir Item de Menu
+      action: destroy destroy_many
+    new:
+      name:
+        en: Create Menu Item
+        pt-BR: Criar Item de Menu
+      action: new create
+  repositories:
+    index:
+      name:
+        en: List Files
+        pt-BR: Listar Arquivos
+      action: index
+    show:
+      name:
+        en: View File
+        pt-BR: Ver Arquivo
+      action: show
+    edit:
+      name:
+        en: Edit File
+        pt-BR: Editar Arquivo
+      action: edit update
+    crop:
+      name:
+        en: Crop Image
+        pt-BR: Cortar Imagem
+      action: crop
+    destroy:
+      name:
+        en: Destroy File
+        pt-BR: Excluir Arquivo
+      action: destroy destroy_many
+    new:
+      name:
+        en: Create File
+        pt-BR: Enviar Arquivo
+      action: new create
+    purge:
+      name:
+        en: Destroy permanently
+        pt-BR: Excluir permanentemente
+      action: recycle_bin destroy purge empty_bin
+    recover:
+      name:
+       en: Restore File
+       pt-BR: Restaurar Arquivo
+      action: recycle_bin recover
+  styles:
+    index:
+      name:
+        en: List Style
+        pt-BR: Listar Estilo
+      action: index
+    show:
+      name:
+        en: View Styles
+        pt-BR: Ver Estilo
+      action: show
+    edit:
+      name:
+        en: Edit Style
+        pt-BR: Editar Estilo
+      action: edit update toggle
+    destroy:
+      name:
+        en: Destroy Style
+        pt-BR: Excluir Estilo
+      action: destroy destroy_many
+    new:
+      name:
+        en: Create Style
+        pt-BR: Criar Estilo
+      action: new create
+    follow:
+      name:
+        en: Follow Style
+        pt-BR: Seguir Estilo
+      action: follow unfollow
+    copy:
+      name:
+        en: Copy Style
+        pt-BR: Copiar Estilo
+      action: copy
+    sort:
+      name:
+        en: Order Styles
+        pt-BR: Ordenar Estilos
+      action: sort
+  components:
+    index:
+      name:
+        en: List Components
+        pt-BR: Listar Componentes
+      action: index
+    show:
+      name:
+        en: View Components
+        pt-BR: Ver Componentes
+      action: show
+    edit:
+      name:
+        en: Edit Component
+        pt-BR: Editar Componente
+      action: edit update toggle
+    destroy:
+      name:
+        en: Destroy Component
+        pt-BR: Excluir Componente
+      action: destroy destroy_many
+    new:
+      name:
+        en: Create Component
+        pt-BR: Criar Componente
+      action: new create clone
+    sort:
+      name:
+        en: Order Components
+        pt-BR: Ordenar Componentes
+      action: sort
+  sites:
+    edit:
+      name:
+        en: Edit Site's configs
+        pt-BR: Editar configurações do site
+      action: edit update
+  extensions:
+    index:
+      name:
+        en: List Extensions
+        pt-BR: Listar Extensões
+      action: index
+    new:
+      name:
+        en: Install Extensions
+        pt-BR: Instalar Extensões
+      action: new create
+    destroy:
+      name:
+        en: Destroy Extensions
+        pt-BR: Excluir Extensões
+      action: destroy
+  statistics:
+    index:
+      name:
+        en: View Statistics
+        pt-BR: Ver Estatísticas
+      action: index
+  activity_records:
+    index:
+      name:
+        en: View Activity Record
+        pt-BR: Ver o Histórico de Atividades
+      action: index
+  skins:
+    index:
+      name:
+        en: Manage themes
+        pt-BR: Gerenciar temas
+      action: index show
+    create:
+      name:
+        en: Apply theme
+        pt-BR: Aplicar tema
+      action: new create apply edit update
+    preview:
+      name:
+        en: Preview a theme
+        pt-BR: Pré-visualizar tema
+      action: preview
+    destroy:
+      name:
+        en: Restore theme
+        pt-BR: Restaurar tema
+      action: destroy

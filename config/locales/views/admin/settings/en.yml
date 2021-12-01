@@ -1,0 +1,32 @@
+en:
+  admin:
+    settings:
+      new:
+        settings:     " Settings "
+      index:
+        params:       " Parameters "
+        exec:         " Execute "
+      params:
+        weby:         " Weby "
+        ldap:         " LDAP "
+        asset_host:   " Assets host "
+        email:        " E-mail "
+        social:       " Social "
+        settings:     " Settings "
+        new_setting:  " New Setting "
+        name:         " Name "
+        value:        " Value "
+        description:  " Description "
+        none_setting: " No Settings "
+      exec:
+        select_file:  " Select File "
+        execute:      " Execute "
+        result:       " Execution result: %{result} "
+      edit:
+        settings:     " Settings "
+      show:
+        setting:      " Settings "
+        name:         " Name "
+        value:        " Value "
+        description:  " Description "
+

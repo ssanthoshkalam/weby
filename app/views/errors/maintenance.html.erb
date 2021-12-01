@@ -1,0 +1,16 @@
+<%- title 'Modo de Manutenção', true %>
+
+<div class="dialog alert alert-info">
+  <%#= image_tag 'weby-logo.png' %>
+  <h1></h1>
+  <h1><%= t('maintenance_mode') %></h1>
+  <p><%= t('maintenance_one') %></p>
+  <p><%= t('maintenance_two') %></p>
+  <p><%= t('maintenance_three') %></p>
+  <p>
+    <%#= @not_found_path %>
+  </p>
+  <p>
+    <%= link_to t('return_to_home'), root_url(subdomain: current_site) %>
+  </p>
+</div>

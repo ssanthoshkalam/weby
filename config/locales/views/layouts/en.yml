@@ -1,0 +1,27 @@
+en:
+  layouts:
+    application:
+      licence: "© Copyright 2012 UFG. All rights reserved."
+      logout: "LOGOUT"
+      register: "SIGNUP"
+      login: "LOGIN"
+      help: "HELP"
+      about: "ABOUT"
+      sites: "SITES"
+      site: "SITE"
+      show-site: "SHOW SITE"
+    weby_pages:
+      licence: "© Copyright 2012 UFG. All rights reserved."
+      logout: "LOGOUT"
+      register: "SIGNUP"
+      login: "LOGIN"
+      help: "HELP"
+      about: "ABOUT"
+      sites: "SITES"
+    weby_sessions:
+      login: "LOGIN"
+      register: "REGISTER"
+      help: "HELP"
+      sites: "SITES"
+      confirmation: "SIGNUP CONFIRMATION"
+      unlock: "UNLOCK INSTRUCTIONS"

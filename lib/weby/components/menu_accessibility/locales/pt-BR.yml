@@ -1,0 +1,58 @@
+pt-BR:
+  components:
+    menu_accessibility:
+      name:                 " Menu de acessibilidade "
+  activerecord:
+    attributes:
+      menu_accessibility_component:
+        font_size:          " Tamanho da Fonte "
+        contrast:           " Contraste "
+        label_font_size:    " Rótulo Tamanho de Fonte "
+        label_contrast:     " Rótulo Contraste "
+        additional_information: " Informações Adicionais "
+        extended_accessibility: " Ativar "
+        template:               " Formato "
+        content_anchor:     ' Âncora do conteúdo '
+        menu_anchor:        ' Âncora do menu '
+        search_anchor:      ' Âncora da busca '
+        information_access_url: 'URL Acesso à Informação'
+  menu_accessibility:
+    views:
+      form:
+        font_size:          " Tamanho da Fonte "
+        contrast:           " Contraste "
+        display_controls:   " Exibir Controles "
+        basic:              " Básico "
+        extended:           " Estendido "
+        default:            " Padrão "
+        bar:                " Barra "
+        information_access_hint: "O ícone somente será exibido se este campo estiver preenchido"
+      basic:
+        increase_font_size: " Aumentar o tamanho da fonte "
+        decrease_font_size: " Diminuir o tamanho da fonte "
+        default_font_size:  " Tamanho padrão da fonte "
+        contrast:           " Alterar o contraste da página "
+        contrast_normal:    " Retirar o contraste da pagina "
+        apply_contrast:     " Ativar o modo contraste "
+        remove_contrast:    " Desativar o modo contraste "
+        colour:             " Cor "
+        go_to_content:      " Ir para o conteúdo "
+        go_to_menu:         " Ir para o menu "
+        go_to_search:       " Ir para busca "
+      extended:
+        increase_font_size: " Aumentar o tamanho da fonte "
+        decrease_font_size: " Diminuir o tamanho da fonte "
+        default_font_size:  " Tamanho padrão da fonte "
+        contrast:           " Alterar o contraste da página "
+        contrast_normal:    " Retirar o contraste da pagina "
+        colour:             " Cor "
+        accessibility_tools: " Ferramentas de Acessibilidade "
+        accessibility_keys: " Teclas de Acesso "
+        or:                 " ou "
+        homepage:           " Página Inicial "
+        go_to_content:      " Ir para o Conteúdo "
+        focus_search_field: " Foco no Campo de Busca "
+        contact_information: " Informações de Contato "
+        details_hotkeys:    " Detalhes das Teclas de Atalho "
+        accessibility:      " + Acessibilidade "
+

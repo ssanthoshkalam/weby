@@ -1,0 +1,30 @@
+pt-BR:
+  components:
+    banner_list:
+      name:                  " Lista de Banners "
+      category:              " Categoria "
+      orientation:           " Tipo "
+      timer:                 " Tempo de transição "
+      show_title:            " Mostrar título? "
+      show_description:      " Mostrar descrição? "
+      show_controls:         " Mostrar controles? "
+  activerecord:
+    attributes:
+      banner_list_component:
+        category:            " Categoria "
+        orientation:         " Tipo "
+        timer:               " Tempo de transição "
+        show_title:          " Mostrar titulo? "
+        show_description:    " Mostrar descrição? "
+        show_controls:       " Mostrar controles? "
+        html_class:          " Classe HTML "
+  banner_list:
+    views:
+      form:
+        horizontal:          " Lista Horizontal "
+        vertical:            " Lista Vertical "
+        slider:              " Slider "
+        timer_hint:          " Em segundos "
+        control_hint:        " Se estiver marcado, links para ir para a próxima foto ou a anterior serão exibidos abaixo do slider "
+      show:
+        share_banner:        "Compartilhar banner"

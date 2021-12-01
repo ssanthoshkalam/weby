@@ -1,0 +1,38 @@
+$height: 24px;
+$text-color: black;
+$background-color: #ccc;
+
+.institutional_links_component.bar {
+  .content {
+    aside {
+      margin: 0;
+      width: auto; }
+    .left{
+      a {
+        color: $text-color;
+        font-size: 16px; }
+      img {
+        height: 20px;
+        padding: 3px;
+        vertical-align: top; }
+      clear: left;
+      float: left; }
+    .right{
+      height: $height;
+      select {
+        font-size: 11px;
+        height: $height;
+        vertical-align: baseline;
+        width: 135px; }
+      clear: right;
+      float: right;
+      text-align: right; }
+    min-width: 500px;
+    margin: 0 auto; }
+  height: 25px;
+  line-height: 25px;
+  color: $text-color;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: $background-color; }

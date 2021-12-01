@@ -1,0 +1,28 @@
+en:
+  sites:
+    admin:
+      backups:
+        index:
+          options_backup:         " Options backup "
+          repositories:           " Repository "
+          files:                  " Download files "
+          menus:                  " Menus "
+          styles:                 " Styles "
+          follow_styles:          " Follow styles "
+          components:             " Layout "
+          themes:                 " Themes "
+          banners:                " Banners "
+          extensions:             " Extensions "
+          groupings:              " Groupings "
+          locales:                " Locales "
+          messages_feedbacks:     " Feedbacks messages "
+          pages:                  " Pages "
+          news:                   " News "
+          events:                 " Events "
+          output:                 " Output: "
+          restore:                " Restore "
+          import:                 " Import "
+          confirm_import:         " Confirm import? Some existant data may be overwritten during this process."
+        import:
+          restore:                " Restore "
+          import:                 " Import "

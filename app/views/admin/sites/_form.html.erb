@@ -1,0 +1,31 @@
+<%= simple_form_for [:admin, @site] do |f| %>
+  <%= f.show_errors %>
+  <%= render_site_url(@site) %>
+  <%= f.input :name, :hint => t("field_required"), :input_html => {:pattern => '^[a-z0-9_\-]+$'}  %>
+  <%= f.input :parent_id, :collection => main_sites_options(@site), include_blank: true, :label => t(".main_site"), input_html: {class: 'xselect2'} %>
+  <%= f.association :groupings, input_html: {class: 'select2 site-groupings'} %>
+  <%= f.input :status, :collection => site_status_options, include_blank: false %>
+  <%= f.input :domain, :hint => "#{t(".domain_explain")} (#{default_domain})" %>
+
+  <%= f.input :title, :input_html => {:maxlength => 50} %>
+  <%= f.input :description, :input_html => {:rows => 4}, :hint => t(".site_comments"), :as => :text %>
+
+  <%= f.input :body_width, :hint => t(".example_width") %>
+  <%= f.input :google_analytics, :input_html => {:rows => 4}, :hint => t(".google_analytics_hint"), :as => :text %>
+
+  <%= f.input :restrict_theme, :as => :boolean, wrapper: :checkbox %>
+
+  <%= f.input :per_page,  :hint => t(".example_per_page") %>
+  <%= f.input :per_page_default,  :required => true %>
+
+  <%= f.association :locales,
+    :as => :check_boxes,
+    :boolean_style => :nested,
+    :collection => Locale.all.map{|l| [flag(l, show_name: true), l.id] } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary', disable_with: t("please_wait") %>
+    <%= link_to t("back"), :back, class: "btn btn-default" %>
+  </div>
+<% end %>
+<% content_for :javascripts, javascript_include_tag("sites.form") %>

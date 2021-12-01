@@ -1,0 +1,14 @@
+en:
+  themes:
+    level2:
+      title:              " Unidades"
+      placeholders:
+        first_place:        " Top "
+        home:               " Home Page "
+        top:                " Header "
+        bottom:             " Bottom "
+      variables:
+        color_scheme:         " Color Scheme "
+  components:
+    media:
+      name: Media

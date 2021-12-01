@@ -1,0 +1,94 @@
+en:
+  sites:
+    admin:
+      repositories:
+        index:
+          archives:             " Files "
+          search:               " Search "
+          new_archive:          " New file "
+          none_archive:         " No Files "
+          filter_begin:         " Filter by date (initial) "
+          filter_end:           " End date "
+        view_picker:
+          repository_as_thumbs: " Show repository as thumbnails "
+          repository_as_list:   " Show repository as list "
+        show:
+          new_archive:         " New file "
+          archives:            " Files "
+          copy:                " Copy "
+          copied:              " Copied "
+          created:             " Created at "
+          copy_to_clipboard:   " Copy to Clipboard "
+          name:                " Name "
+          size:                " Size "
+          type:                " Type "
+          archive_description: " The archive description "
+          uploaded_by:          " Uploaded by "
+          file_link:           " Link to file "
+          list_all:            " List All "
+        new:
+          archives:            " Files "
+          repository_alert:    " Attention, files uploaded to the repository are public and can be referenced by any site! Confidential files should not be sent to the server. "
+          field_required:      " Field required! "
+          repo_description_hint: " Write the textual description of the image content to be used by screen readers so your site has better accessibilty. "
+          please_wait:         " Please wait "
+          add_archives:        " Add files "
+          max_file_size:       " Maximum file size: %{param}MB "
+        edit:
+          archives:            " Files "
+          field_required:      " Field required! "
+          repo_description_hint: " Write the textual description of the image content to be used by screen readers so your site has better accessibilty. "
+          please_wait:         " Please wait "
+          crop_image:          " Crop image "
+        crop:
+          crop_image:          " Crop image "
+          crop:                " Generate "
+          lock_aspect_ratio:   " Lock the aspect ratio "
+          repo_description_hint: " Write the textual description of the image content to be used by screen readers so your site has better accessibilty. "
+          height:              " Height "
+          width:               " Width "
+        repo:
+          picture:             " Picture "
+        list:
+          archive:             " File "
+          title:               " Title "
+          description:         " Description "
+          type:                " Type "
+          crop_image:          " Crop Image "
+        thumbs:
+          crop_image:          " Crop Image "
+        repository_search:
+          archives:            " Files "
+          accept:              " Accept "
+          my_repository:       " MY REPOSITORY "
+          others_repositories: " ANOTHERS REPOSITORIES "
+          repository_alert:    " Attention, files uploaded to the repository are public and can be referenced by any site! Confidential files should not be sent to the server. "
+          new_file:            " NEW FILE "
+          none_file:           " No Files Found. "
+          file:                " File "
+          description:         " Description "
+          send:                " Send "
+          select_file:         " Select File "
+          field_required:      " Field Required! "
+        search_and_new_file:
+          search_image:        " Search Image "
+          new_image:           " New image "
+        show_attachment_list:
+          insert:              " Insert "
+          details:             " Details "
+          cancel:              " Cancel "
+        list_popup:
+          search_repository:   " Search file "
+          archive:             " File "
+          none_file:           " No Files Found. "
+        recycle_bin:
+          archives:             " Files "
+          new_archive:          " New File "
+          archive:              " File "
+          title:               " Title "
+          description:          " Description "
+          type:                 " Typo "
+          deleted_at:           " Deleted at "
+          destroy:              " Destroy "
+          recover:              " Recover "
+

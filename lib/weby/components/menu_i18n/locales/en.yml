@@ -1,0 +1,18 @@
+en:
+  components:
+    menu_i18n:
+      name:    " Internationalization Menu "
+  activerecord:
+    attributes:
+      menu_i18n_component:
+        dropdown:           " Dropdown "
+        template:           " Template "
+        use_translator:     " Use Automatic Translation "
+        extra_langs:        " Additional language "
+  menu_i18n:
+    views:
+      form:
+        flag:  " Flag "
+        code:  " Country code "
+        flag_name: "Flag and language name"
+        translator_hint: "The texts on the site are translated on the fly for the user, the translations are not stored."

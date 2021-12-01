@@ -1,0 +1,22 @@
+<% include_component_javascript :javascripts, 'banner_list' %>
+<%= f.input :category,
+  collection: current_site.banner_sites.category_counts.map{|b| b.name},
+  priority: component.category,
+  include_blank: true
+%>
+<%= f.input :orientation, collection: [
+    [t(".vertical"),"vertical"],
+    [t(".horizontal"),"horizontal"],
+    [t(".slider"),"slider"]
+  ],
+  priority: component.orientation,
+  include_blank: false
+%>
+<div class="slider-form">
+  <%= f.input :timer, as: :integer, hint: t(".timer_hint") %>
+  <%= f.input :show_title, wrapper: :checkbox, as: :boolean %>
+  <%= f.input :show_description, wrapper: :checkbox, as: :boolean %>
+  <%= f.input :show_controls, wrapper: :checkbox, as: :boolean, hint: t(".control_hint") %>
+</div>
+
+<%= f.input :html_class, :input_html => {:pattern => '^[A-Za-z0-9_\-]*$'} %>

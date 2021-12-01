@@ -1,0 +1,181 @@
+.btn > img {
+  background-color: transparent !important;
+}
+*:not(.btn):not(button) {
+  background-color: #cfe5fc !important;
+  color: #000066 !important;
+  border-color: 1px solid white !important;
+}
+a:not(.btn) {
+  color: #000066;
+  font-weight: bold !important;
+}
+a:hover:not(.btn) {
+  text-decoration: underline !important;
+}
+.gov_bar_component {
+  border-top: 1px solid white !important;
+  border-bottom: 1px solid white !important;
+}
+#wrapper > header {
+  background: none;
+}
+#webybar .label,
+#webybar .label *,
+.gov_bar_component *,
+article.page-show,
+article.page-show *,
+.news_list_component *,
+.menu-res li,
+.event_list_component *,
+.news_as_home_component #pages *,
+div#list *,
+div#pages.pages-list,
+div#pages.pages-list *,
+nav.menu_accessibility_extended,
+nav.menu_accessibility_extended div,
+ul#accessibility_areas,
+li.accessibility_tools,
+li.accessibility_tools b,
+li.accessibility_keys,
+li.accessibility_keys b,
+li.accessibility_keys p,
+li.accessibility_options,
+li.accessibility_options *,
+div#barra-brasil,
+div#barra-brasil *,
+.institutional_links_component ul li,
+.institutional_links_component ul li a,
+footer > .components_group_component {
+  background-color: #9FCFFF !important;
+}
+
+header .menu-bar {
+
+  &, .menu_component,
+  .menu-head, .menu-head > span,
+  .hamburger-box,
+  .search_box_component, .search_box_component form,
+  .search_box_component input[type=submit],
+  .institutional_links_component, .institutional_links_component ul,
+  .institutional_links_component li:first-child {
+    background-color: #000066 !important;
+    color: #FFF !important;
+  }
+  .menu-panel, .hamburger-menu, .hamburger-menu li, .hamburger-menu a, .hamburger-menu .menu-res {
+    background-color: #9FCFFF !important;
+  }
+  .institutional_links_component.list > ul > li:not(:first-child) {
+    &, & a {
+      background-color: #cfe5fc !important;
+    }
+  }
+  .hamburger-inner {
+    background-color: white !important;
+  }
+}
+
+div#accessibility_button, div#accessibility_button *, {
+  background-color: #000066 !important;
+  border: 0px !important;
+  color: #cfe5fc !important;
+}
+nav.menu_accessibility_extended {
+  border-top: 0px solid white !important;
+}
+div#barra-brasil {
+  border: 1px solid white !important;
+}
+#barra-brasil .list .first {
+  border-right: 2px solid white !important;
+  border-left: 2px solid white !important
+}
+.brasil-flag,
+#barra-brasil .list-item {
+  border-right: 2px solid white !important;
+}
+
+aside .menu_component .menu-res li,
+footer nav .menu-res li {
+  border: 1px solid white !important;
+  margin-right: 0px;
+  background-color: #9FCFFF !important;
+}
+.search_box_component #search,
+.form-control {
+  background-color: white !important;
+  border-color: #9FCFFF !important;
+}
+table.border, table.border th, table.border td {
+  border: none !important;
+}
+.input-append #search {
+  background-color: white !important;
+  border-color: #9FCFFF !important;
+}
+#content > article .event {
+  border-left: 1px solid white !important;
+}
+#content #pages li {
+  border-bottom: 1px dotted white !important;
+}
+div.pagination,
+.search-results .item-search-result {
+  border-bottom: 1px dotted white !important;
+}
+div .btn a {
+  background-color: none !important;
+}
+#filterNav .selected {
+  color: #000066 !important;
+  font-weight: normal !important;
+}
+span.accessibility {
+  border: 1px solid white !important;
+}
+span.accessibility,
+span.accessibility_font,
+span.accessibility_font *,
+span.accessibility_color {
+  background-color: #9FCFFF !important;
+}
+input#search:focus,
+textarea:focus,
+input:focus {
+  border-color: #000066 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+::-webkit-input-placeholder {
+  color: #000066 !important;
+}
+#accessibility_border {
+  border-bottom: 2px solid #000066 !important;
+}
+
+.front_news_component .front_news_title, .event_list_component.front .event_list_title,
+.blank_component .front_news_title{
+  border-bottom: 1px solid #cfe5fa !important;
+}
+
+.link_to_all a, .front_news_component > .front_news_title > a, .event_list_component.front > .event_list_title > a{
+  border-bottom: 3px solid #000066 !important;
+}
+
+#webybar .label, #content > article,
+.news_list_component .list border fullwidth zebra,
+.news_list_component,
+.event_list_component,
+article.page-show,
+.news_as_home_component article.page-show,
+.front_news_component,
+div#pages.pages-list{
+  border-bottom: 1px solid white !important;
+}
+
+div#list{
+  border-top: 1px solid white !important;
+  border-right: 1px solid white !important;
+  border-left: 1px solid white !important;
+}
+

@@ -1,0 +1,46 @@
+pt-BR:
+  components:
+    event_list:
+      name:                 " Lista de Eventos "
+  activerecord:
+    attributes:
+      event_list_component:
+        quant:                " Quantidade de eventos exibidos por vez "
+        avatar_height:        " Altura da imagem do evento "
+        avatar_width:         " Largura da imagem do evento "
+        label:                " Título "
+        filter_by:            " Selecionar apenas eventos com as categorias "
+        read_more:            " Exibir 'Leia mais' "
+        group_by:             " Agrupar eventos "
+        image_size:           " Versão da imagem "
+        new_tab:              " Abrir eventos em uma nova janela "
+        max_char:             " Número máximo de caracteres do resumo "
+        link_to_all:          " Link para exibir todos "
+        template:             " Formato de exibição "
+        date_format:          " Formato da data "
+        source:               " Origem "
+        sel_site:             " Site "
+        html_class:           " Classe HTML "
+  event_list:
+    views:
+      show:
+        read_more:            " Leia mais... "
+        posted_by:            " Por "
+        posted_on:            " Em "
+        events:               " Eventos "
+      form:
+        main:                 " Básico "
+        advanced:             " Avançado "
+        basic:                " Tabela "
+        front:                " Lista "
+        full:                 " Completo "
+        short:                " Data inicial "
+        two_dates:            " Inicial e final "
+        own:                  " Eventos Próprios "
+        selected:             " De outro site "
+        m:                    " Média "
+        l:                    " Pequena "
+        i:                    " Miniatura "
+        t:                    " Thumbnail "
+        link_to_all_hint:     " Texto do link para a lista com todos os eventos "
+        image_size_hint:      " Thumbnail é uma versão reduzida da imagem, onde é feito um corte quadrado para que a proporção original não se perca "

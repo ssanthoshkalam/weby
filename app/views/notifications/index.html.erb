@@ -1,0 +1,28 @@
+<div id="profile">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render partial: 'profile' %>
+    </div>
+    <div class="col-md-9">
+      <div class="heading buffer-bottom"><%= t('.notifications') %></div>
+      <div id="notifications">
+        <div class="row">
+          <div class="col-md-5">
+            <%= form_tag notifications_path, method: 'get', autocapitalize: "off", class: 'search' do %>
+              <%= search_input params[:search] %>
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            <div class="pull-right">
+              <%= link_to t(".mark_all_notifications_as_read"), mark_as_read_notifications_path, method: :post, class: "btn btn-primary" if current_user.unread_notifications_array.any? %>
+            </div>
+          </div>
+        </div>
+
+        <div id="list">
+          <%= render 'list' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

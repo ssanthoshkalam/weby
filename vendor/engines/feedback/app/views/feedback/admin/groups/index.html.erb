@@ -1,0 +1,22 @@
+<% title ".feedback" %>
+<% breadcrumb :groups %>
+<div class="pull-right">
+  <% if check_permission(Feedback::Admin::GroupsController, [:new]) %>
+    <%= link_to t(".new_group"),
+      new_admin_group_path,
+      class: "btn btn-success" %>
+  <% end %>
+  <% if check_permission(Feedback::Admin::MessagesController, [:index]) %>
+    <%= link_to  t(".messages"),
+      admin_messages_path,
+      class: "btn btn-default" %>
+  <% end %>
+</div>
+<div class="clearfix form-group"></div>
+
+<div id="list">
+  <%= render :partial => "list" %>
+</div>
+<% content_for :stylesheets, stylesheet_link_tag("sortable") %>
+<% content_for :javascripts, javascript_include_tag("init/sortable") %>
+<% content_for :javascripts, javascript_include_tag("feedback/admin.groups.index") %>

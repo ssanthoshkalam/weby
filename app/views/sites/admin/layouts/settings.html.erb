@@ -1,0 +1,12 @@
+<% breadcrumb :layout_settings %>
+
+<%= simple_form_for current_site, url: settings_site_admin_layouts_path do |f| %>
+  <%= f.input :head_html, input_html: { class: 'code-area' }, hint: t('.head_html_hint') %>
+
+  <div class="form-actions">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to t("back"), :back, class: "btn btn-default" %>
+  </div>
+<% end %>
+
+<% content_for :javascripts, javascript_include_tag('init/codemirror') %>

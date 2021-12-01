@@ -1,0 +1,39 @@
+en:
+  sites:
+    admin:
+      styles:
+        index:
+          others:           " Other Styles "
+          new_style:        " New Style "
+          styles:           " My Styles "
+        others:
+          no_other_styles:  " No styles found "
+          name:             " Name "
+          site:             " Owner "
+          actions:          " Actions "
+          updated_at:       " Last update "
+        list:
+          actions:          " Actions "
+          name:             " Name "
+          no_styles:        " No styles found "
+          publish:          " Published "
+          site:             " Owner "
+          updated_at:       " Last update "
+          followers:        " Followers "
+        form:
+          help_with_style:  " Need help with the style "
+          format:           " Format "
+          comment:          " Comment "
+          uncomment:        " Uncomment "
+          apply:            " Apply "
+          preview:          " Preview "
+          insert_image:     " Image Link"
+        edit:
+          styles:           " Styles "
+        new:
+          styles:           " Styles "
+        show:
+          styles:           " Styles "
+          style:            " Style "
+          list_all:         " List all "
+

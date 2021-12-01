@@ -1,0 +1,12 @@
+<% include_component_javascript :javascripts, 'event_list' %>
+<% quant = component.quant || 5 %>
+<% @events = component.get_events(current_site , params["event_list_page#{component.id}".to_sym]) %>
+<% @site = component.source_site || current_site %>
+
+<%= content_tag component.html_tag, class: "event_list_component #{component.template} #{component.html_class}" do %>
+  <% if component.template == 'basic' %>
+    <%= render partial: 'event_list/views/table', locals: {component: component} %>
+  <% elsif component.template == 'front' %>
+    <%= render partial: 'event_list/views/list',  locals: {component: component} %>
+  <% end %>
+<% end %>

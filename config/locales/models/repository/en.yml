@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      repository:             "File"
+    attributes:
+      repository:
+        archive_content_type: ""
+        archive_file_name:    ""
+        archive_file_size:    ""
+        archive_updated_at:   ""
+        archive:              " File "
+        created_at:           " Created at "
+        description:          " Description "
+        title:                " Title "
+        legend:               " Legend "
+        site_id:              " Site id "
+        updated_at:           " Updated at "
+

@@ -1,0 +1,29 @@
+en:
+  sites:
+    admin:
+      users:
+        manage_roles:
+          manage_roles:      " Manage Roles "
+          roles_permissions: " Roles and Permissions "
+          manage_users:      " Manage Users "
+          users:             " Users "
+        enrole:
+          enrole_user:       " Enrole users "
+          role:              " Roles "
+          none_user:         " No User "
+          none_role:         " No Roles "
+          new_role:          " New Role "
+        enroled:
+          enroled_users:     " Enroled Users "
+          role:              " Roles "
+          none_user:         " No Enroled Users "
+        role_form:
+          confirm_unrole:    " Are you sure you wish to remove all of your roles and unrole from this site? "
+        enrole_adms:
+          enrole_user:       " Enrole Admin User "
+          enroled_users:     " Enroled Admin Users "
+          none_user:         " No Admin Users "
+        search:
+          no_user_found:     " No user found "
+
+

@@ -1,0 +1,52 @@
+<% title ".archives" %>
+<% breadcrumb params[:search].present? ? :repositories_search : :repositories, params[:search] %>
+<%= form_tag site_admin_repositories_path, method: 'get', autocapitalize: "off", class: 'search' do %>
+  <div class="row">
+    <div class="col-md-5">
+      <%= search_input params[:search] %>
+    </div>
+    <div class="col-md-3">
+      <%= select_tag "mime_type[]",
+          grouped_options_for_select(load_mime_types(current_site), params[:mime_type]),
+          include_blank: false,
+          style: 'vertical-align: top;',
+          class: 'select2 search-filter form-control',
+          multiple: true %>
+    </div>
+    <div class="col-md-4">
+      <div class="pull-right">
+        <% with_permission(action: :new) do %>
+          <%= link_to t(".new_archive"),
+            new_site_admin_repository_path,
+            class: "btn btn-success" %>
+        <% end %>
+        <% with_permission(action: [:purge, :recover]) do %>
+          <%= link_to t("recycle_bin"), recycle_bin_site_admin_repositories_path, class: "btn btn-default" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="flex-row center-align form-group">
+    <div class="cell-20">
+        <%= text_field_tag :begin_at, params[:begin_at], placeholder: t(".filter_begin"), class: 'datepicker form-control', autocomplete: 'off' %>
+    </div>
+    <div class="cell">
+      <b>-</b>
+    </div>
+    <div class="cell-20">
+        <%= text_field_tag :end_at, params[:end_at], placeholder: t(".filter_end"), class: 'datepicker form-control', autocomplete: 'off' %>
+    </div>
+  </div>
+<% end %>
+
+<% if @repositories.empty? %>
+  <div class="alert alert-warning">
+    <%= t(".none_archive") %>
+  </div>
+<% else %>
+  <div id="repo_list">
+    <%= render :partial => repository_partial %>
+  </div>
+<% end %>
+<% content_for :javascripts, javascript_include_tag('repositories.index') %>
+<% content_for :stylesheets, stylesheet_link_tag("datetime") %>

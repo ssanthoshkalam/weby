@@ -1,0 +1,11 @@
+en:
+  themes:
+    level3:
+      title:              "Events"
+      placeholders:
+        first_place:        " Top "
+        home:               " Home Page "
+        top:                " Header "
+        bottom:             " Bottom "
+      variables:
+        color_scheme:         " Color Scheme "

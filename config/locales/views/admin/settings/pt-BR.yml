@@ -1,0 +1,32 @@
+pt-BR:
+  admin:
+    settings:
+      new:
+        settings:     " Configurações "
+      index:
+        params:       " Parâmetros "
+        exec:         " Rotinas "
+      params:
+        weby:         " Weby "
+        ldap:         " LDAP "
+        asset_host:   " Host de Assets "
+        email:        " E-mail "
+        social:       " Social "
+        settings:     " Configurações "
+        new_setting:  " Nova Configuração "
+        name:         " Nome "
+        value:        " Valor "
+        description:  " Descrição "
+        none_setting: " Nenhuma configuração "
+      exec:
+        select_file:  " Selecione o arquivo "
+        execute:      " Executar "
+        result:       " Resultado da execução: %{result} "
+      edit:
+        settings:     " Configurações "
+      show:
+        setting:      " Configuração "
+        name:         " Nome "
+        value:        " Valor "
+        description:  " Descrição "
+

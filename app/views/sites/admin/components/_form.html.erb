@@ -1,0 +1,57 @@
+<% title ".layout" %>
+
+<%= simple_form_for [:site_admin, @skin, @component], html: {class: 'form-horizontal'}, url: url, method: method do |f| %>
+  <%= f.show_errors %>
+
+  <%#= f.input :site_id, input_html: {value: @site.id}, as: :hidden %>
+  <%= hidden_field_tag :component, @component.name %>
+
+  <div class="form-group string">
+    <label class="string"><%= t('.component') %></label>
+    <div class="selected-component"><%= render_component_icon(@component) %> <%= t("components.#{@component.name}.name") %></div>
+  </div>
+
+  <%= f.input :alias, placeholder: t(".alias_hint") if Weby::Components.is_aliasable? @component.name %>
+
+  <%= render_component @component, 'form', locals: {f: f} %>
+  <hr/>
+
+  <%= f.input :publish, wrapper: :checkbox, wrapper_html: { class: "side" }, as: :boolean, input_html: { class: "check-button" } %>
+
+  <%= f.input :visibility, collection: [
+    [t(".always"),"0"],
+    [t(".home_page"),"1"],
+    [t(".inner_page"),"2"]
+  ],
+  include_blank: false
+  %>
+
+  <div class="form-group">
+    <label><%= t(".place")  %></label>
+    <% if params[:placeholder] %>
+      <% if params[:placeholder].match(/^\d*$/) %>
+        <% group = @skin.components.find_by(id: params[:placeholder].to_i) %>
+        <input type="text"disabled="true" class="form-control" value="
+          <%= group ? (group.alias.present? ? group.alias : t("components.#{group.name}.name")) : params[:placeholder] %>"/>
+      <% else %>
+        <input type="text"disabled="true" class="form-control" value="
+          <%= t("themes.#{@skin.theme}.placeholders.#{@component.place_holder}", :default => @component.place_holder) %>"/>
+      <% end %>
+    <% else %>
+      <% if @component.place_holder.to_s.match(/^\d*$/) and (group = @skin.components.find_by(id: @component.place_holder.to_i)) %>
+          <input type="text"disabled="true" class="form-control" value="
+            <%= group.alias.present? ? group.alias : t("components.#{group.name}.name") %>"/>
+      <% else %>
+        <%= raw make_mini_layout %>
+      <% end %>
+    <% end %>
+    <%= f.input :place_holder, as: :hidden, input_html: {id: "component_place_holder"} %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary', disable_with: t("please_wait") %>
+    <%= link_to t("back"), :back, class: "btn btn-default" %>
+  </div>
+<% end %>
+
+<% content_for :javascripts, javascript_include_tag('components.form') %>
+<%= yield :bottom %>

@@ -1,0 +1,40 @@
+<div class="search_bar">
+  <%= form_tag main_app.site_admin_pages_path(template: 'list_popup'), method: 'get', autocapitalize: "off", class: 'search', remote: true do %>
+    <div class="row">
+      <div class="col-md-7">
+        <%= search_input params[:search], placeholder: t('.search_pages'), button_class: 'btn-search-page' %>
+      </div>
+    </div>
+    <%= hidden_field_tag 'page', 1 %>
+    <%= hidden_field_tag 'per_page', "#{params[:per_page]}" %>
+  <% end %>
+  <div class="clearfix"></div>
+</div>
+<% if @pages %>
+  <% if @pages.empty? %>
+    <div class="alert alert-warning">
+      <%= t(".none_page") %>
+    </div>
+  <% else %>
+    <div class="page-results">
+      <table class="list table table-striped">
+        <thead>
+          <th><%= t(".title") %></th>
+          <th><%= sortable 'date_begin_at', t(".register_date")%></th>
+        </thead>
+        <tbody>
+          <% @pages.each do |page| %>
+            <tr data-id="<%= page.id%>" data-url="<%= site_page_path(page) %>" data-title="<%= page.title %>" data-type="<%= "Page" %>" class="cursor highlight target-item">
+              <td><%= page.title %></td>
+              <td><%= page.created_at.strftime('%d/%m/%y') %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <div class="pull-right"> <%= paginate @pages, remote: true, size: :sm %> </div>
+      <div class="pull-left"> <%= per_page_links @pages, true, :sm %> </div>
+      <div class="clearfix"></div>
+    </div>
+  <% end %>
+<% end %>

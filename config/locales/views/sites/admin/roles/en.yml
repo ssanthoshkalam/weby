@@ -1,0 +1,13 @@
+en:
+  sites:
+    admin:
+      roles:
+        index:
+          roles:                " Roles "
+        new:
+          users:                " Users "
+          roles_permissions:    " Roles and Permissions "
+          new_role:             " New Role "
+        edit:
+          users:                " Users "
+          roles_permissions:    " Roles and Permissions "

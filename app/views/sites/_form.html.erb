@@ -1,0 +1,35 @@
+<%= simple_form_for @site, url: update_site_admin_path do |f| %>
+  <%= f.show_errors %>
+  <%= repository_search t(".site_image"), "site_image",
+    "site[top_banner_id]", @site.repository,
+    multiple: false, file_types: 'image' %>
+  <%= render_site_url(@site) %>
+  <% if current_user.is_admin? %>
+    <%= f.input :name, :hint => t("field_required") %>
+    <%= f.input :parent_id, :collection => main_sites_options(current_site), include_blank: true, :label => t('.main_site'), input_html: {class: 'xselect2'} %>
+    <%= f.association :groupings, input_html: {class: 'select2 site-groupings'} %>
+    <%= f.input :domain, :hint => "#{t(".domain_explain")} (#{default_domain})" %>
+  <% else %>
+    <%= f.input :parent, :label => t('.main_site'), as: :string, input_html: {:value => @site.main_site.title, :disabled => "disabled" } if @site.main_site %>
+  <% end %>
+
+  <%= f.input :title, :input_html => {:maxlength => 50} %>
+  <%= f.input :description, :input_html => {:rows => 4}, :hint => t(".site_comments"), :as => :text %>
+  <%#= f.input :theme, :collection => @themes.collect{|name| [t("themes.#{name}.title"), name]} %>
+  <%= f.input :body_width, :hint => t(".example_width") %>
+  <%= f.input :google_analytics, :input_html => {:rows => 4}, :hint => t(".google_analytics_hint"), :as => :text %>
+  <% if current_user.is_admin? %>
+    <%= f.input :restrict_theme, :as => :boolean, wrapper: :checkbox %>
+  <% end %>
+  <%= f.input :per_page, :hint => t(".example_per_page") %>
+  <%= f.input :per_page_default, :required => true %>
+  <%= f.association :locales,
+    :as => :check_boxes,
+    :boolean_style => :nested,
+    :collection => Locale.all.map{|l| [flag(l, show_name: true), l.id] } %>
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary', disable_with: t("please_wait") %>
+    <%= link_to t("back"), :back, class: "btn btn-default" %>
+  </div>
+<% end %>
+<% content_for :javascripts, javascript_include_tag("sites.form") %>

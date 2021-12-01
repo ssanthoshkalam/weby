@@ -1,0 +1,20 @@
+en:
+  components:
+    feed:
+      name:               " Feed Menu "
+  activerecord:
+    attributes:
+      feed_component:
+        atom_icon:        " ATOM feed icon "
+        rss_icon:         " RSS feed icon "
+        align:            " Alignment "
+        rss_icon_custom:  " RSS Custom icon "
+        atom_icon_custom: " ATOM Custom icon "
+  feed:
+    views:
+      form:
+        select_from_repo: " Select an icon from repository "
+        dont_show:        " Don't show any icon "
+        left:             " Left "
+        right:            " Right "
+        center:           " Center "

@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    attributes:
+      extension:
+        show_author:     " Show news' author "
+        show_created_at: " Show news' creation date "
+        show_updated_at: " Show news' update date "
+        image_size:      " Image size used on news search "

@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      component:      " Component "
+    attributes:
+      component:
+        place_holder: " Place "
+        visibility:   " Visibility "
+        alias:        " Name "
+        name:         " Component "
+        publish:      " Published "

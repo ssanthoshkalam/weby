@@ -1,0 +1,13 @@
+pt-BR:
+  sites:
+    admin:
+      roles:
+        index:
+          roles:                " Papéis "
+        new:
+          users:                " Usuários "
+          roles_permissions:    " Permissões e Papéis "
+          new_role:             " Novo Papel "
+        edit:
+          users:                " Usuários "
+          roles_permissions:    " Permissões e Papéis "

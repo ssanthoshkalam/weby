@@ -1,0 +1,8 @@
+LineLength:
+  Enabled: false
+
+DotPosition:
+  Enabled: false
+
+StringLiterals:
+  EnforcedStyle: single_quotes

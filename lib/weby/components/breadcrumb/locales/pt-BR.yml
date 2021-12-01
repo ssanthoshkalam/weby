@@ -1,0 +1,17 @@
+pt-BR:
+  components:
+    breadcrumb:
+      name: "Navegação (Breadcrumb)"
+  activerecord:
+    attributes:
+      breadcrumb_component:
+        label: "Rótulo"
+        home_label: 'Rótulo para Página Inicial'
+  breadcrumb:
+    views:
+      show:
+        home:   "Página Inicial"
+        news: 'Notícias'
+        events: 'Eventos'
+        page_hierarchy: 'Hierarquia da navegação'
+      form:

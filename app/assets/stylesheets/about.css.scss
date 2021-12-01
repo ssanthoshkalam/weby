@@ -1,0 +1,52 @@
+/*
+ *= require_self
+ *= require google/lato
+ */
+
+#about-body
+{
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #FCFCFC url(sessions_bg.jpg) repeat left top;
+  height: 100%;
+
+  .header
+  {
+    background: #FCFCFC url(sessions_bg.jpg) repeat left top;
+    text-align: center;
+    padding: 20px 0;
+    .description
+    {
+      width: 800px;
+      margin: 30px auto 0;
+    }
+  }
+  .container
+  {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    h1
+    {
+      color: #BC1625;
+      font-size: 20px;
+    }
+
+    a,
+    a:hover
+    {
+      color: #BC1625;
+      text-decoration: none;
+    }
+    ul { color: #344259; }
+    .footnote { color: #888; }
+  }
+  .footer
+  {
+    padding: 15px 0;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

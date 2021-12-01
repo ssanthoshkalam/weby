@@ -1,0 +1,39 @@
+<% if component.template == 'bar' %>
+  <nav class="menu_accessibility_component bar">
+    <div class="direct-access">
+      <span><%= link_to t('.go_to_content'), "##{component.content_anchor}", class: 'goto-content' %><b aria-hidden="true">1</b></span>
+      <span><%= link_to t('.go_to_menu'), "##{component.menu_anchor}", class: 'goto-menu' %><b aria-hidden="true">2</b></span>
+      <span><%= link_to t('.go_to_search'), "##{component.search_anchor}", class: 'goto-search' %><b aria-hidden="true">3</b></span>
+    </div>
+    <% if component.information_access_url.present? %>
+      <div class="additional-content">
+        <%= link_to image_tag('marca-ai.png', alt: 'Logomarca Acesso à Informação'), component.information_access_url, class: 'ai-link', title: 'Acesso à Informação' %>
+      </div>
+    <% end %>
+    <div class="access-actions">
+      <% if component.font_size? %>
+        <span class='accessibility_font'>
+          <%= button_tag(content_tag(:span, 'A+', aria: {hidden: true}), class: 'increase-font', title: t('.increase_font_size'), type: :button) %>
+          <%# button_tag(content_tag(:span, 'A', aria: {hidden: true}), onclick: 'font_size_original()', title: t('.default_font_size'), type: :button) %>
+          <%= button_tag(content_tag(:span, 'A-', aria: {hidden: true}), class: 'decrease-font', title: t('.decrease_font_size'), type: :button) %>
+        </span>
+      <% end %>
+      <% if component.contrast? %>
+        <span class="accessibility_color">
+          <%= button_tag(content_tag(:span, 'C', aria: {hidden: true}), class: 'toggle-contrast', title: t('.apply_contrast'), type: :button, data: {alt_title: t('.remove_contrast')}) %>
+        </span>
+      <% end %>
+    </div>
+  </nav>
+<% else %>
+  <nav class="menu_accessibility_component right basic">
+    <span class="accessibility">
+      <%= acessibility_font_links(component) %>
+      <% if component.contrast? %>
+        <span class="accessibility_color">
+          <%= acessibility_color_links(component) %>
+        </span>
+      <% end %>
+    </span>
+  </nav>
+<% end %>

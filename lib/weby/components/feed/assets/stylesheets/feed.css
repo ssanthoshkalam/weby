@@ -1,0 +1,16 @@
+form .item-box{
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 80px;
+}
+
+form .add-uniq-file input, form.new_feed_component .add-uniq-file input{
+  display: block;
+}
+
+.feed_component{
+  text-align:center;
+  margin: 5px;
+  overflow: hidden;
+}

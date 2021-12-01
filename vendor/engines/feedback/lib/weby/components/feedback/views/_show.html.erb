@@ -1,0 +1,3 @@
+<%= content_tag component.html_tag, class: "feedback_component #{component.html_class}" do %>
+  <%= link_to weby_icon('envelope', (component.label || t(".feedback"))), feedback_path(groups: component.parse_groups(current_site)) %>
+<% end %>

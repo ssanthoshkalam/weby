@@ -1,0 +1,53 @@
+<% if !current_page?(main_app.site_path) && (@page || @news || @event || @message) then  %>
+  <nav class="breadcrumb_component" aria-label="<%= t('.page_hierarchy') %>">
+    <ol>
+      <%= content_tag :li, class: "breadcrumb-label" do
+          component.label
+        end if component.label.present? %>
+      <li class="breadcrumb-home">
+        <%= link_to component.home_label.present? ? component.home_label : t(".home"), main_app.site_path %><span class="breadcrumb-divider"></span>
+      </li>
+      <% if @news %>
+        <li>
+          <%= link_to t(".news"), news_index_path %><span class="breadcrumb-divider"></span>
+        </li>
+        <% last = @news if !@news.is_a?(Array) %>
+      <% elsif @event %>
+        <li>
+          <%= link_to t(".events"), events_path %><span class="breadcrumb-divider"></span>
+        </li>
+        <% last = @event %>
+      <% elsif @message %>
+        <% last = @message %>
+      <% elsif @page %>
+        <% items = MenuItem.where(target_type: "Page", target_id: @page.id) #A pagina pode estar em varios menus, vamos usar o mais fundo %>
+        <% if items.empty? then
+            #verificar se nao existe um item de menu somente com a url da página
+            items = MenuItem.where(url: main_app.site_page_path(@page.id))
+          end
+        %>
+        <% unless items.empty? %>
+          <% deepest = [] %>
+          <% items.each do |item| %>
+            <%  arr = [] %>
+            <% begin %>
+              <% arr.prepend item %>
+              <% item = MenuItem.find_by(id: item.parent_id) %>
+            <% end while item %>
+            <% deepest = arr if arr.size > deepest.size %>
+          <% end %>
+          <% last = deepest.pop %>
+          <% deepest.each do |menu_item| %>
+            <% item_link = (menu_item.target_id? && menu_item.target_type == "Page") ? main_app.site_page_path(menu_item.target_id) : menu_item.url.to_s.match(/^\/p\/\d*/) ? menu_item.url : false %>
+            <li><%= link_to_if( item_link, menu_item.title, item_link) %><span class="breadcrumb-divider"></span></li>
+          <% end %>
+        <% else %>
+          <% last = @page %>
+        <% end %>
+      <% end %>
+      <% if last %>
+        <li aria-current="location"><%= last.try(:title) || last.try(:name) %></li>
+      <% end %>
+    </ol>
+  </nav>
+<% end %>

@@ -1,0 +1,67 @@
+pt-BR:
+  admin:
+    users:
+      show:
+        user:               " Usuário "
+        id:                 " Id "
+        status:             " Status "
+        enabled:            " Ativo "
+        disabled:           " Desativado "
+        username:           " Nome de usuário "
+        email:              " E-mail "
+        unconfirmed_email:  " Atualização de E-mail pendente "
+        phone:              " Telefone "
+        mobile:             " Celular "
+        locale:             " Idioma "
+        register:           " Cadastro "
+        last_request:       " Última ação "
+        last_sign_in_at:    " Último login "
+        global_roles:       " Papéis Globais "
+        user_current_sites: " Sites Cadastrados "
+        roles:              " Papéis "
+        admin:              " Administração "
+        auth_sources:       " Tipos de autenticação "
+      new:
+        new_user:           " Novo Usuário "
+      form:
+        username:           " Nome de Usuário "
+        password:           " Senha "
+        password_change:    " Nova senha "
+        locale_hint:        " Idioma a ser utilizado na área administrativa "
+        ldap_user_warning:  " <b>Atenção</b> Este usuário possui autenticação por LDAP vinculada, se uma senhha da conta Weby for definida ele poderá realizar um login com a conta Weby"
+      index:
+        users:              " Usuários "
+        new_user:           " Novo Usuário "
+        manage_roles:       " Gerenciar Papéis "
+        roles_permissions:  " Permissões e Papéis "
+      list:
+        name:               " Nome "
+        user:               " Usuário "
+        email:              " E-mail "
+        active:             " Ativo "
+        is_admin:           " Admin "
+        roles:              " Papéis Globais "
+        admin:              " Admin "
+        manage_roles:       " Gerenciar Papéis "
+        no_global_roles:    "Nenhum papel global"
+        none_user:          " Nenhum usuário "
+      edit:
+        editing_my_account: " Editando Minha Conta "
+      enrole:
+        none_user:          " Nenhum Usuário "
+        enrole_user:        " Relacionar Usuário "
+        new_role:           " Novo Papel "
+        role:               " Papéis globais "
+      enroled:
+        enroled_user:       " Usuários Relacionados "
+        role:               " Papéis globais "
+        none_user:          " Nenhum Usuário Relacionado "
+      role_form:
+        confirm_unrole:     " Tem certeza de que deseja remover todos os papéis de seu próprio usuário? "
+      manage_roles:
+        users:              " Usuários "
+        roles_permissions:  " Permissões e Papéis "
+      user_search:
+        type_to_search:     " Informe o nome, login ou email para pesquisar "
+      search:
+        no_user_found:     " Nenhum usuário encontrado "

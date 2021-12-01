@@ -1,0 +1,41 @@
+<div id="profile">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="avatar">
+        <img src="//www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(@profile.email) %>?s=120&d=mm" class="img-circle">
+      </div>
+      <div class="info">
+        <%= @profile.first_name %><br />
+        <span class="last-name"><%= @profile.last_name %></span>
+      </div>
+      <div class="actions">
+        <% if is_owner? %>
+          <%= link_to t('.edit-profile'), edit_profile_path(@profile.login), class: 'btn btn-primary btn-block' %>
+          <%= link_to t('.security'), history_profile_path(@profile.login), class: 'btn btn-primary btn-block' %>
+        <% end %>
+        <%= link_to "#{icon('chevron-left', white: true)}#{t("back")}".html_safe, :back, class: "btn btn-default btn-block" %>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="heading"><%= t('.latest-news-published') %></div>
+      <% if @news.blank? %>
+        <div class="alert alert-warning">
+          <%= t(".none_news", name: @profile) %>
+        </div>
+      <% else %>
+        <% @news.each do |new| %>
+          <div class="media thumbnail">
+            <div class="pull-left">
+              <%= news_image(new.image, :t, 100, nil, {as: "link", url: news_url(new, subdomain: new.site), image_class:'img-circle'}) %>
+            </div>
+            <div class="media-body">
+              <div class="title"><%= link_to new.title, news_url(new, subdomain: new.site) %></div>
+              <div class="description"><%= t(".published", site: link_to(new.site.title, site_url(subdomain: new.site)), date: l(new.created_at, format: :short)).html_safe %></div>
+              <div class="summary"><%= render_user_content new.summary %></div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

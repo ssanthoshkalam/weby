@@ -1,0 +1,69 @@
+en:
+  sticker:
+    admin:
+      banners:
+        form:
+          banners:                  " Banners "
+          add_category:             " Add Category "
+          image:                    " Banner image "
+          begin:                    " Begin "
+          enter_the_url:            " Enter the URL "
+          lower_numbers_come_first: " Lower numbers come first "
+          period_banner:            " Banner period "
+          publication_infinite:     " Publication Infinite "
+          title:                    " Title "
+          description:              " Description "
+          new_category:             " New Category "
+        list:
+          image:                    " Image "
+          author:                   " Author "
+          category:                 " Category "
+          position:                 " Position "
+          publication_date:         " Initial date "
+          publish:                  " Publish "
+          register_date:            " Created at "
+          title:                    " Title "
+          none_category:            " No category "
+        edit:
+          help_image_banner:        " This image will be set as the main image of the baner "
+          banners:                  " Banners "
+        index:
+          new_banner:               " New Banner "
+          banners:                  " Banners "
+          none_banner:              " None Banner "
+          publisheds:               " Published "
+        view_picker:
+          banners_as_thumbs:        " Show banners as thumbnails "
+          banners_as_list:          " Show banners as list "
+        show:
+          banner:                   " Banner "
+          banners:                  " Banners "
+          list_all:                 " List All "
+          url:                      " URL "
+          period_banner:            " Banner period "
+          origin_site:              " Origin Site "
+          shareable:                " Enable Sharing "
+          publish:                  " Published "
+        unshare:
+          unshared_banner:          " Shared Banner removed sucessfully "
+        new:
+          banners:                  " Banners "
+        share_modal:
+          my_sites:                 "Choose the site and the location you want to share"
+          no-site-found:            "No site available to share"
+          no-banner-list-found:     "No Banner List Component Found"
+          close:                    "Close"
+          banner_not_shareable:     'Banner not found or not shareable'
+        share:
+          banner_shared:            "Banner was shared successfully"
+        fronts:
+          banners:                  " Banners "
+          new_banner:               " New Banner "
+          all_banners:              " All Banners "
+          none_published:           " None Published "
+          image:                    " Image "
+          title:                    " Title "
+          category:                 " Category "
+          position:                 " Position "
+          publication_date:         " Publication Date "
+          publish:                  " Publish "

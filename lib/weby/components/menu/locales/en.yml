@@ -1,0 +1,19 @@
+en:
+  components:
+    menu:
+      name:                " Menu "
+  activerecord:
+    attributes:
+      menu_component:
+        menu_id:           " Menu "
+        dropdown:          " Use dropdown "
+        style:             " Style "
+        html_class:        " HTML Class "
+        title:             " Title "
+  menu:
+    views:
+      form:
+        menu_id:           " Menu "
+        style:             " Style "
+        dropdown_hint:     " Sub-menus will dropdown on mouse over "
+

@@ -1,0 +1,33 @@
+<% if @extensions.empty? %>
+  <div class="alert alert-warning">
+    <%= t(".none_extension") %>
+  </div>
+<% else %>
+
+  <table class="table table-striped align-middle">
+    <thead>
+      <th><%= t(".name") %></th>
+      <th><%= t(".version") %></th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% @extensions.each do |extension| %>
+        <% raw_extension = Weby::extensions[extension.name.to_sym] %>
+        <tr>
+          <td>
+              <%= link_to t("extensions.#{extension.name}.name"), "/admin/#{extension.name}" %>
+            </td>
+          <td>
+            <%= raw_extension.version %>
+          </td>
+          <td class="actions text-right">
+            <%= render_dropdown_menu do %>
+              <%= raw make_menu(extension) %>
+            <% end %>
+         </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

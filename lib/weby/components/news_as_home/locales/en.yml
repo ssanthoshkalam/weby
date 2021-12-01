@@ -1,0 +1,24 @@
+en:
+  components:
+    news_as_home:
+      name:                   " Page in Homepage "
+      page:                   " Page "
+  activerecord:
+    attributes:
+      news_as_home_component:
+        page:                 " Page "
+        page_id:              " Page "
+        show_title:           " Show title "
+        show_info:            " Show informations "
+        html_id:              " HTML ID "
+        source_type:          " Source "
+        show_as_popup:        " Show as pop-up "
+        popup_type:           " Pop-up type "
+  news_as_home:
+    views:
+      form:
+        page:                 " Page "
+        feedback:             " Feedback form "
+        modal:                " Modal "
+      show:
+        page_not_found:       " Page not found, please check the component configuration "

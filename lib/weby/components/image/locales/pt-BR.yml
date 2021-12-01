@@ -1,0 +1,28 @@
+pt-BR:
+  components:
+    image:
+      name: "Imagem"
+  activerecord:
+    attributes:
+      image_component:
+        repository_id: "Imagem"
+        repository: "Imagem"
+        height: "Altura"
+        width: "Largura"
+        size: "Tamanho"
+        target_type: "Tipo do Link"
+        target_id: "Link"
+        target: "Link"
+        url: "URL"
+        hide_for_sr: "Ocultar para leitores de tela"
+        new_tab: "Abrir em uma nova janela"
+        html_class:   "Classe HTML"
+        title:  "Título"
+  image:
+    views:
+      show:
+      form:
+        select_image:  'Selecione a imagem'
+        select_contrast_image: 'Selecione a imagem contraste'
+        default_image: 'Imagem padrão'
+        contrast_default_image: 'Imagem padrão contraste'

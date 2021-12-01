@@ -1,0 +1,33 @@
+en:
+  components:
+    subsite_front_news:
+      name:                         " Subsites Front News "
+      quant:                        " Number of front news "
+  activerecord:
+    attributes:
+      subsite_front_news_component:
+        quant:                      " Number of front news "
+        source:                     " Source "
+        sel_site:                   " Site "
+        label:                      " Title "
+        label_link:                 " Link on Title "
+        link_to_all:                " 'View all' text "
+        link_to_all_url:            " 'View all' link "
+        tag_as_label:               " Show first tag as label "
+        hide_author:                " Hide author/date "
+        order_by:                   " Order by "
+  subsite_front_news:
+    views:
+      show:
+        news_from:                  " From the site "
+        read_more:                  " Read more... "
+      form:
+        link_to_all_hint:     " Text of the link to the list of all news "
+        subsites:                   " Subsites "
+        selected:                   " Selected site "
+        position:             " Manual (in the original site) "
+        news:                 " News "
+        home:                 " Homepage "
+        created_at:           " Created at "
+        updated_at:           " Updated at "
+

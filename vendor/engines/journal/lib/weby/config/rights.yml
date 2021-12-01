@@ -1,0 +1,69 @@
+rights:
+  news:
+    index:
+      name:
+        en: List News
+        pt-BR: Listar Notícias
+      action: index fronts
+    show:
+      name:
+        en: View News
+        pt-BR: Ver Notícias
+      action: show
+    edit:
+      name:
+        en: Edit News
+        pt-BR:  Editar Notícias
+      action: edit update toggle update_draft restore_draft cancel
+    share:
+      name:
+        en: Share News
+        pt-BR:  Compartilhar Notícias
+      action: share
+    unshare:
+      name:
+        en: Unshare News
+        pt-BR:  Descompartilhar Notícias
+      action: unshare
+    destroy:
+      name:
+        en: Destroy News
+        pt-BR: Excluir Notícias
+      action: destroy destroy_many
+    sort:
+      name:
+        en: Order News
+        pt-BR: Ordernar Notícias
+      action: sort
+    new:
+      name:
+        en: Create News
+        pt-BR: Criar Notícias
+      action: new create update_draft restore_draft cancel
+    purge:
+      name:
+        en: Purge
+        pt-BR: Excluir permanentemente
+      action: recycle_bin destroy purge empty_bin
+    recover:
+      name:
+        en: Restore News
+        pt-BR: Restaurar Notícias
+      action: recycle_bin recover
+    newsletter:
+      name:
+        en: Send Newsletter
+        pt-BR: Enviar Newsletter
+      action: newsletter newsletter_histories
+  newsletters:
+    index:
+      name:
+        en: List newsletters
+        pt-BR: Listar newsletters
+      action: index
+    destroy:
+      name:
+        en: Delete newsletter emails
+        pt-BR: Excluir emails de newsletter
+      action: destroy destroy_many
+

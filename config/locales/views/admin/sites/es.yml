@@ -1,0 +1,39 @@
+es:
+  admin:
+    sites:
+      show:
+        sites:                  " Sitio "
+      new:
+        sites:                  " Sitios "
+      index:
+        sites:                  " Sitios "
+        new_site:               " Nuevo Sitio "
+      edit:
+        sites:                  " Sitios "
+        settings:               " Configuración "
+        main:                   " Principal "
+        subsites:               " Subsites "
+        pages:                  " Páginas "
+      list:
+        name:                   " Nombre "
+        dashboard:              " Administración "
+        description:            " Descripción "
+        title:                  " Titulo "
+        settings:               " Configuración "
+        no-site-found:          " No hay sitios."
+        delete:                 " Excluir "
+        active:                 " Activo "
+        inactive:               " Inactivo "
+        deactivate:             " Desactivar "
+        activate:               " Activar "
+      form:
+        example_width:          " Ejemplo "
+        example_url:            " Ejemplo: http://site.com "
+        example_per_page:       " Ejemplo "
+        main_site:              " Sitio Principal "
+        site_comments:          " Opina sobre los objetivos del sitio "
+        footer_text:            " Institución - Dirección. XXX. Ciudad-Estado - Teléfono: General: + XX XX XXXX-XXXX, Servicio del usuario : + XXXX-XXXX XX XX XX + XXXX-XXXX. Fax: + XX XX XXXX-XXXX "
+        domain_explain:         " Rellene el campo únicamente si es distinta de la predeterminada "
+        active:                 " Activo "
+        inactive:               " Inactivo "
+        google_analytics_hint:  'Cole o código de acompanhamento da tag de site global ou o ID de acompanhamento'

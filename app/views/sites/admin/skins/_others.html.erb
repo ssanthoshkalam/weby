@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-5">
+    <%= form_tag site_admin_skins_path(anchor: 'tab-styles'), method: 'get', name: 'style_search', remote: true, class: 'search' do %>
+      <%= search_input params[:search] %>
+    <% end %>
+  </div>
+</div>
+
+<% unless styles.blank? %>
+ <div class="styles" id="other_styles">
+  <table class="table table-striped align-middle">
+    <thead>
+      <th width="34%"> <%= t('.name') %> </th>
+      <th width="25%"> <%= t('.site') %> </th>
+      <th width="18%"> <%= t('.updated_at') %> </th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% styles.group_by{ |style| style.skin.site }.each do |site, site_styles| %>
+        <tr><td colspan="4" class="site-style-group">
+          <%= content_tag :span, class: "toggle-styles", data: {site: site.id} do %>
+            <%= icon('chevron-down') %> <b><%= site.title %> <span class="label label-info"><%= site.skins.find_by(theme: @skin.theme).styles.own.size %></span></b>
+          <% end %>
+        </td></tr>
+        <% site_styles.each do |style| %>
+          <tr class="style-site-<%= site.id %>">
+            <td><%= link_to(style.name, site_admin_skin_style_path(style.skin_id, style)) %></td>
+            <td><%= link_to style.site.name, site_url(subdomain: style.site), title: style.site.title, target: :_blank %></td>
+            <td><%= l(style.updated_at, format: :short) %>
+            <td class="actions text-right">
+              <%= render_dropdown_menu do %>
+                <%= style_menu(style) %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate styles, remote: true %>
+ </div>
+<% else %>
+  <div class="alert alert-warning">
+    <%= t(".no_other_styles") %>
+  </div>
+<% end %>

@@ -1,0 +1,66 @@
+<% repository = component.repository %>
+<% contrast_repository = (Repository.find(component.contrast_repository_id) rescue nil) if component.contrast_repository_id.present? %>
+<%= content_tag component.html_tag, class: "image_component #{component.html_class} #{repository.present? || component.default_image.present? ? 'has-image' : 'no-image'}" do %>
+  <% link_url = target_url(component) %>
+  <% link_title = component.target.title if component.target %>
+  <% if repository.present? %>
+    <% if repository.image? || repository.svg? %>
+      <%
+          format = component.size.present? ? component.size : format_for_custom(component.width, component.height, repository)
+          if component.size.blank?
+            width = component.width.present? ? component.width : false#current_site.body_width ? current_site.body_width : false
+            height = component.height.present? ? component.height : false
+          elsif repository.svg?
+            width, height = dimension_for_size component.size
+          end
+          size = style_for_dimension width, height
+      %>
+      <% if component.title.present? %>
+        <h3><%= link_url.present? ? link_to(component.title, link_url, target: (component.new_tab ? '_blank' : '_self')) : component.title %></h3>
+      <% end %>
+      <%= weby_file_view(repository,
+                         format, nil, nil,
+                         {
+                            as: link_url.present? ? 'link' : 'image',
+                            style: size,
+                            alt: repository.description,
+                            title: link_title,
+                            url: link_url,
+                            target: (component.new_tab ? '_blank' : '_self'),
+                            data: {contrast_src: contrast_repository&.archive&.url(format)},
+                            aria: {hidden: (true if component.hide_for_sr?)}
+                         }) %>
+    <% elsif repository.flash? %>
+      <%
+        if component.size.present?
+          width, height = dimension_for_size component.size
+        else
+          width = component.width.present? ? component.width : false# current_site.body_width ? current_site.body_width : false
+          height = component.height.present? ? component.height : false
+        end
+        size = ""
+        size << " width=#{width}" if width
+        size << " height=#{height}" if height
+      %>
+     <object<%= size %>>
+        <embed src="<%= repository.archive.url %>"<%= size %> type="application/x-shockwave-flash" wmode="opaque"></embed>
+     </object>
+    <% end %>
+  <% elsif component.default_image.present? %>
+    <% if component.title.present? %>
+      <h3><%= link_url.present? ? link_to(component.title, link_url, target: (component.new_tab ? '_blank' : '_self'), title: link_title || guess_title_by(component.url)) : component.title %></h3>
+    <% end %>
+    <% img = image_tag(component.default_image,
+                        style: style_for_dimension(component.width, component.height),
+                        data: {contrast_src: (asset_url(component.contrast_default_image) rescue nil)},
+                        aria: {hidden: (true if component.hide_for_sr?)},
+                        alt: component.default_image_alt) %>
+    <% if link_url.present? %>
+      <%= link_to img, link_url, target: (component.new_tab ? '_blank' : '_self'), title: (link_title || guess_title_by(component.url)) %>
+    <% else %>
+      <%= img %>
+    <% end %>
+  <% elsif component.title.present? %>
+    <h3><%= link_url.present? ? link_to(component.title, link_url, target: (component.new_tab ? '_blank' : '_self'), title: link_title || guess_title_by(component.url)) : component.title %></h3>
+  <% end %>
+<% end %>

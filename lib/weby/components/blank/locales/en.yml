@@ -1,0 +1,17 @@
+en:
+  components:
+    blank:
+      name:            " HTML/Javascript "
+      body:            " Content "
+  activerecord:
+    attributes:
+      blank_component:
+        body:          " Content "
+        put_at_end:    " Insert content at the end of the document "
+        html_class:    " HTML Class "
+  blank:
+    views:
+      form:
+        format:           " Format "
+        comment:          " Comment "
+        uncomment:        " Uncomment "

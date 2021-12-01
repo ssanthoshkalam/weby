@@ -1,0 +1,68 @@
+<% content_for :javascripts, javascript_include_tag("target.dialog") %>
+<% content_for :stylesheets, stylesheet_link_tag('target.dialog') %>
+<% extensions = current_site.active_extensions %>
+<div id="modal_target_list" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="<%= t("close") %>">&times;</button>
+        <h3 class="modal-title"><%=t("target_dialog.select_target")%><%=t("target_dialog.select_file") if editable_url %></h3>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs <%= editable_url ? "" : "hide" %>" id="target_tabs">
+          <li class="active"><a href="#tab-pages" data-toggle="tab" data-link="<%= main_app.site_admin_pages_path %>"><%= t("activerecord.models.pages") %></a></li>
+          <% if editable_url %>
+            <li><a data-toggle="tab" href="#tab-weby"><%= t("target_dialog.common_pages") %></a></li>
+            <% if extensions.any? %>
+              <% extensions.each do |extension| %>
+                <% next if !lookup_context.exists?("target_pages", ["#{extension.name}/admin"], true) %>
+                <li>
+                  <a href="#tab-<%= extension.name %>" data-toggle="tab">
+                    <%= t("extensions.#{extension.name}.name") %>
+                  </a>
+                </li>
+                <% content_for :target_dialog_extensions do %>
+                  <div class="tab-pane" id="tab-<%= extension.name %>">
+                    <%= render "#{extension.name}/admin/target_pages" %>
+                  </div>
+                <% end %>
+              <% end %>
+            <% end  %>
+            <li><a data-toggle="tab" href="#tab-repository"><%= t("target_dialog.repositories") %></a></li>
+          <% end %>
+        </ul>
+
+        <div class="tab-content" id="target-results">
+          <div class="tab-pane active" id="tab-pages">
+            <%= render 'sites/admin/pages/list_popup' %>
+          </div>
+          <% if editable_url %>
+            <div class="tab-pane" id="tab-repository">
+              <%= render 'sites/admin/repositories/list_popup' %>
+            </div>
+            <div class="tab-pane" id="tab-weby">
+              <table class="list table table-striped">
+                <thead>
+                  <th><%= t("target_dialog.title") %></th>
+                  <th><%= t("target_dialog.description") %></th>
+                </thead>
+                <tbody>
+                  <% common_pages.each do |common_page| %>
+                    <tr data-title="<%= common_page[:title] %>" data-url="<%= common_page[:url] %>" class="cursor highlight target-item">
+                      <td><%= common_page[:title] %></td>
+                      <td><%= common_page[:description] %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <% if extensions.any? %>
+              <%= yield :target_dialog_extensions %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

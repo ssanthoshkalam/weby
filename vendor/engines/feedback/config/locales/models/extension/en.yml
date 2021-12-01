@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    attributes:
+      extension:
+        text: " Text "
+        label_as_placeholder: 'Label as Placeholder'

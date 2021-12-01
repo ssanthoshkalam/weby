@@ -1,0 +1,71 @@
+en:
+  sites:
+    admin:
+      activity_records:
+        index:
+          activity_records:           " Activity records "
+        show:
+          activity_records:           " Activity records "
+        list:
+          no_activity_records:        " No activity records found "
+          details:                    " Details "
+          show:                       " Show "
+          created_at:                 " Date "
+          note:                       " Activity "
+#--- Sites/Admin/Menus/MenuItem ---#
+          created_menu_item:          " created a menu item "
+          updated_menu_item:          " updated a menu item "
+          destroyed_menu_item:        " destroyed a menu item "
+#--- Sites/Admin/Banners ---#
+          created_banner:             " created a banner "
+          updated_banner:             " updated a banner "
+          destroyed_banner:           " destroyed a banner "
+#--- Sites/Admin/Components ---#
+          created_component:          " created a component "
+          updated_component:          " updated a component "
+          destroyed_component:        " destroyed a component "
+#--- Sites/Admin/Menus ---#
+          created_menu:               " created a menu "
+          updated_menu:               " updated a menu "
+          destroyed_menu:             " destroyed a menu "
+#--- Sites/Admin/Pages ---#
+          created_page:               " created a page "
+          updated_page:               " updated a page "
+          destroyed_page:             " deleted a page "
+          moved_page_to_recycle_bin:  " moved a page to trash "
+          restored_page:              " restored a page "
+#--- Sites/Admin/News ---#
+          created_news:               " created a news "
+          updated_news:               " updated a news "
+          shared_news:                " shared a news "
+          unshared_news:              " unshared a news "
+          destroyed_news:             " deleted a news "
+          moved_news_to_recycle_bin:  " moved a news to trash "
+          restored_news:              " restored a news "
+#--- Sites/Admin/Events ---#
+          created_event:               " creatd an event "
+          updated_event:               " updatd an event "
+          destroyed_event:             " deleted an event "
+          moved_event_to_recycle_bin:  " moved an event to trash "
+          restored_event:              " restored an event "
+#--- Sites/Admin/Repositories ---#
+          uploaded_file:              " uploaded a file "
+          updated_file:               " updated a file "
+          destroyed_file:             " destroyed a file "
+          moved_file_to_recycle_bin:  " moved a file to recycle bin "
+          restored_file:              " restored a file "
+#--- Sites/Admin/Roles ---#
+          created_role:               " created a role "
+          updated_role:               " updated a role "
+          destroyed_role:             " destroyed a role "
+#--- Sites/Admin/Style ---#
+          created_style:              " created a style "
+          updated_style:              " updated a style "
+          destroyed_style:            " destroyed a style "
+          followed_style:             " followed a style "
+          copied_style:               " copied a style "
+#--- Sites/Admin/Theme ---#
+          theme_installed:            " installed a theme "
+          theme_applied:              " applied a theme "
+          theme_reseted:              " reseted a theme "
+          layout_settings_updated:    " updated layout settings "

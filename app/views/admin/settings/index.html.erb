@@ -1,0 +1,16 @@
+<% content_for :javascripts, javascript_include_tag("settings.index") %>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#params" aria-controls="home" role="tab" data-toggle="tab"><%= t('.params') %></a></li>
+  <li role="presentation"><a href="#exec" aria-controls="profile" role="tab" data-toggle="tab"><%= t('.exec') %></a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="params">
+    <%= render 'params' %>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="exec">
+    <%= render 'exec' %>
+  </div>
+</div>
+

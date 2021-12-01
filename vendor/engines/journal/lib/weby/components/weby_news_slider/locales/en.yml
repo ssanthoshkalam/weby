@@ -1,0 +1,19 @@
+en:
+  components:
+    weby_news_slider:
+      name:                       " Weby News Slider "
+  activerecord:
+    attributes:
+      weby_news_slider_component:
+        news_category:            " News Category "
+        width:                    " Width "
+        height:                   " Height "
+        quantity:                 " Quantity "
+        timer:                    " Transition time "
+  weby_news_slider:
+    views:
+      show:
+      form:
+        news_category_hint:       " It is preferable that the news contain an image with a proportion of 400 x 300 "
+        timer_hint:               " In seconds "
+        no_category:              " Front News "

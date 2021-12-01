@@ -1,0 +1,87 @@
+---
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgresql-secrets
+type: Opaque
+data:
+  PG_PASS: d2VieTEyMzQ1IQ==
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: weby-svc
+  labels:
+    app: weby-svc
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+  selector:
+    app: weby-app
+    tier: weby-app
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weby-app
+  labels:
+    app: weby-app
+spec:
+  selector:
+    matchLabels:
+      app: weby-app
+      tier: weby-app
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: weby-app
+        tier: weby-app
+    spec:
+      # initContainers:
+      # - name: init-weby
+      #   image: ssanthoshkalam/weby:latest
+      #   args: ['init']
+      #   env:
+      #   - name: PG_USER
+      #     value: weby
+      #   - name: PG_PASS
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: postgresql-secrets
+      #         key: PG_PASS
+      #   - name: PG_DB
+      #     value: weby
+      #   - name: PG_HOST
+      #     value: weby-default.crwfhufuczvl.ap-south-1.rds.amazonaws.com
+      #   - name: RAILS_ENV
+      #     value: 'development'
+      #   - name: SECRET_KEY_BASE
+      #     value: d42f89e05bca1a10b56952a91911aef765832ae23cb10c9af6729e3ddd3bed56cfadadd50353278890343719bfa3bbc319920573d3a3f812c32bd5b0d3fc6702        
+      containers:
+      - image: ssanthoshkalam/weby:latest
+        name: weby
+        env:
+        - name: PG_USER
+          value: weby
+        - name: PG_PASS
+          valueFrom:
+            secretKeyRef:
+              name: postgresql-secrets
+              key: PG_PASS
+        - name: PG_DB
+          value: weby
+        - name: PG_HOST
+          value: weby-default.crwfhufuczvl.ap-south-1.rds.amazonaws.com
+        - name: RAILS_ENV
+          value: 'development'
+        - name: SECRET_KEY_BASE
+          value: d42f89e05bca1a10b56952a91911aef765832ae23cb10c9af6729e3ddd3bed56cfadadd50353278890343719bfa3bbc319920573d3a3f812c32bd5b0d3fc6702
+        ports:
+        - containerPort: 3000
+          name: weby-app

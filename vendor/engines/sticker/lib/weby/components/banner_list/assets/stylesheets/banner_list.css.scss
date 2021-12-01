@@ -1,0 +1,62 @@
+/*
+ *= require flexslider-photo_slider
+ *= require lightbox-photo_slider
+ */
+
+.banner_list_component {
+    
+    .banner_image {
+        margin: 0;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .banner {
+        position: relative;
+    }
+
+    .banner .unpublish{
+        display: none;
+        background-color: white;
+        border: 1px solid rgba(100,100,100,0.10);
+    }
+
+    .banner .unpublish a{
+        /*color: red;*/
+    }
+
+    .banner:hover .unpublish{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.banner_list_component.horizontal {
+    .banner {
+        float: left;
+    }
+}
+
+.share-banner {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+
+  .share-icon {
+    width: 72px !important;
+    height: 72px !important;
+  }
+}
+
+.slides > li, .banner_list_component > .banner {
+  &:hover .share-banner {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

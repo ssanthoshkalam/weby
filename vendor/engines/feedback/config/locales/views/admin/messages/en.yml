@@ -1,0 +1,26 @@
+en:
+  feedback:
+    admin:
+      messages:
+        index:
+         feedbacktitle: " Feedback "
+         feedback:      " Messages "
+         new_group:     " New Group "
+         groups:        " Groups "
+        show:
+         feedback:      " Feedback "
+         name:          " Name "
+         email:         " E-mail "
+         subject:       " Subject "
+         message:       " message "
+         send_date:     " Send Date "
+         groups:        " Groups "
+         group:         " Group "
+         list_all:      " List all "
+        list:
+         name:          " Name "
+         none_feedback: " None Feedback "
+         subject:       " Subject "
+         date:          " Date "
+         email:         " E-mail "
+

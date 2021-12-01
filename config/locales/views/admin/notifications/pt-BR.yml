@@ -1,0 +1,20 @@
+pt-BR:
+  admin:
+    notifications:
+      index:
+        notifications:            " Notificações "
+        new_notification:         " Nova Notificação "
+      list:
+        title:                    " Título "
+        body:                     " Mensagem "
+        date:                     " Data "
+        no_notifications:         " Nenhuma Notificação "
+      form:
+        title:                    " Título "
+        body:                     " Mensagem "
+      show:
+        id:                       " ID "
+        title:                    " Título "
+        body:                     " Mensagem "
+        created_at:               " Criado em "
+        list_all:                 " Listar todas "

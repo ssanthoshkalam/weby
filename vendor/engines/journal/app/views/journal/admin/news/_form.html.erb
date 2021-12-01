@@ -1,0 +1,48 @@
+<% if @draft %>
+  <div class="alert alert-danger" role="alert">
+    <%= t('.has_draft') %>
+    <div class="pull-right">
+      <%= link_to t('yes'), restore_draft_admin_news_index_path(news_id: @news.id), class: 'btn btn-primary restore-draft' %>
+      <%= link_to t('no'), update_draft_admin_news_index_path(news_id: @news.id), class: 'btn btn-default discard-draft' %>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+<% end %>
+<%= simple_form_for [:admin, @news], html: {data: {drafturl: update_draft_admin_news_index_path(news_id: @news.id)}} do |f| %>
+  <%= f.input :site_id, as: :hidden, input_html: {value: current_site.id} %>
+  <%= f.show_errors %>
+
+  <%= repository_search t(".image"), "news_image",
+    "news[image]", @news.image,
+    multiple: false, file_types: 'image' %>
+
+  <%= render('translates_form', f: f) %>
+
+  <%= f.input :source, wrapper_html: {class: 'side'} %>
+
+  <%= f.input :url, wrapper_html: {class: 'side'}, placeholder: "http://site.com" %>
+
+  <%= f.input :status, collection: @status_types, include_blank: false %>
+
+  <%= f.input :date_begin_at, hint: t(".date_begin_hint"), input_html: {autocomplete: 'off'} %>
+
+  <%= f.simple_fields_for(:news_sites, @news.new_record? ? @news.news_sites : @news.news_sites.where(site_id: current_site.id)) do |g| %>
+    <%= g.input :id, as: :hidden %>
+    <%= g.input :site_id, as: :hidden, input_html: {value: current_site.id} %>
+    <%= g.input :category_list, hint: t(".page_categories_help"), input_html: {value: g.object.category_list.to_s, class: 'input-xlarge input-category', data: {taglist: Journal::NewsSite.uniq_category_counts.map{|t| t.name }}} %>
+    <%= g.input :front, wrapper: :checkbox %>
+  <% end %>
+
+  <%= f.input :date_end_at, hint: t(".date_end_hint"), input_html: {autocomplete: 'off'} %>
+
+  <%= repository_search t(".related_files"),
+    "related_file_ids", "news[related_file_ids][]", @news.related_files,
+    multiple: true, file_types: false %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary', disable_with: t("please_wait") %>
+    <%= link_to t("cancel"), cancel_admin_news_index_path, method: :post, class: "btn btn-default" %>
+  </div>
+<% end %>
+<% content_for :javascripts, javascript_include_tag("journal/news.form") %>
+<% content_for :stylesheets, stylesheet_link_tag("datetime") %>
